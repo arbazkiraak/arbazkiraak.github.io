@@ -56,9 +56,9 @@
     <h3>Hi, there!</h3>
     <h3 class="lead">
       <br>
-      My name is Arbaz Hussain and I am based in India. I am currently employed as a <b style="color: blue;">Smart
-        contract Security Triager</b> at <strong>Immunefi</strong>, with a strong inclination towards Blockchain
-      Security Research and Web Security.
+      I'm Arbaz Hussain, located in INDIA 🇮🇳. I am currently employed as a <b style="color: blue;">Smart
+        contract Security Triager</b> at <strong>Immunefi</strong>, with a strong inclination towards Blockchain & Web
+      security research.
       <br><br>
       My professional interests revolve around Blockchain and Web technologies, with a strong desire to conduct
       significant research in these areas.
@@ -355,12 +355,13 @@
                   let link = item.link;
                   let tags = item.categories;
                   let output = `<div class="article">
-                          <h5 class="title">${title}</h5><br>
-                          <img src="${thumb}" height="100" width="180" alt="article heading image"><br><br>
-                          <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i><br>
-                          <button class="button button5"><a href="${link}" style="color:black;" target="_blank">Read</a></button>
-                        </div>`;
+                  <h5 class="title">${title}</h5><br>
+                  <img src="${thumb}" height="100" width="180" alt="article heading image"><br><br>
+                  <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i><br>
+                  <button class="button button5" onclick="window.open('${link}', '_blank')" style="color:black;">Read</button>
+              </div>`;
                   $('.articles').append(output);
+
                 }
               },
               type: 'GET'
