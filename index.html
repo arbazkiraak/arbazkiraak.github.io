@@ -353,40 +353,48 @@
       }
     </style>
 
-    <script>
-          function fetchblog() {
-            $.ajax({
-              url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbazhussain",
-              data: {
-                format: 'json'
-              },
-              error: function () {
-                $('#info').html('<p>An error has occurred</p>');
-              },
-              dataType: 'jsonp',
-              success: function (data) {
-                let items = data.items;
-                for (let item of items) {
-                  let title = item.title;
-                  let pubdate = item.pubDate;
-                  let thumb = item.thumbnail;
-                  let link = item.link;
-                  let tags = item.categories;
-                  let output = `<div class="article">
-                  <h5 class="title">${title}</h5><br>
-                  <img src="${thumb}" height="100" width="180" alt="article heading image"><br><br>
-                  <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i><br>
-                  <button class="button button5" onclick="window.open('${link}', '_blank')" style="color:black;">Read</button>
-              </div>`;
-                  $('.articles').append(output);
+<script>
+  function fetchblog() {
+    $.ajax({
+      url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbazhussain",
+      data: {
+        format: 'json'
+      },
+      error: function () {
+        $('#info').html('<p>An error has occurred</p>');
+      },
+      dataType: 'jsonp',
+      success: function (data) {
+        let items = data.items;
+        for (let item of items) {
+          let title = item.title;
+          let pubdate = item.pubDate;
+          let description = item.description;
 
-                }
-              },
-              type: 'GET'
-            });
+          // Extract image URL from the description
+          let thumb = "";
+          let imgSrcMatch = description.match(/<img.*?src="(.*?)"/);
+          if (imgSrcMatch && imgSrcMatch.length > 1) {
+            thumb = imgSrcMatch[1];
+          }
+
+          let link = item.link;
+          let tags = item.categories;
+          let output = `<div class="article">
+            <h5 class="title">${title}</h5><br>
+            <img src="${thumb}" height="100" width="180" alt="article heading image"><br><br>
+            <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i><br>
+            <button class="button button5" onclick="window.open('${link}', '_blank')" style="color:black;">Read</button>
+          </div>`;
+          $('.articles').append(output);
+        }
+      },
+      type: 'GET'
+    });
   }
-          fetchblog();
-    </script>
+  fetchblog();
+</script>
+
 
     <div class="article">
       <h5 class="title">More articles</h5><br>
@@ -410,7 +418,7 @@
 
           <div class="twitter">
             <a class="twitter-timeline" href="https://twitter.com/arbazkiraak?ref_src=twsrc%5Etfw"
-              data-tweet-limit="4">Tweets by arbaz hussain</a>
+              data-tweet-limit="3">Tweets by arbaz hussain</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div> <br>
         </div>
