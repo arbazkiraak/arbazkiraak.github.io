@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  "Testing."
-date:   2024-02-24 21:19:00 +0530
+date:   2023-04-07 22:30:00 +0530
 author: Arbaz Hussain
-tags:   [music]
+tags:   [music, philosophy]
 image: /imgs/thumbs/git-gud.png
 permalink: /blog/test
 description: "Testing markdown?"  
 ---
+
+> ― Heraclitus
 
 ### Test 1
