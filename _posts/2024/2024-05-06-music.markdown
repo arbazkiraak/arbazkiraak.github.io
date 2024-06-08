@@ -5,7 +5,7 @@ date:   2024-06-05 8:48:00 +0530
 author: Arbaz Hussain
 tags:   [experience, perspective, music]
 image: /imgs/thumbs/music.png
-permalink: /blog/final-music
+permalink: /blog/music
 description: "Exploring the profound impact of music on our lives."
 ---
 
