@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Markdown Renderer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        .markdown-content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+        }
+
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Markdown Renderer</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Markdown Input</h3>
+                <textarea id="markdown-input" class="form-control"></textarea>
+            </div>
+            <div class="col-md-6">
+                <h3>Rendered HTML</h3>
+                <div id="html-output" class="markdown-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Showdown library -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script>
+        // Custom extension for footnotes
+        showdown.extension('footnotes', function () {
+            return [{
+                type: 'lang',
+                regex: /\[\^([^\]]+)\]/g,
+                replace: function (match, name) {
+                    return '<sup id="fnref:' + name + '"><a href="#fn:' + name + '" rel="footnote">' + name + '</a></sup>';
+                }
+            },
+            {
+                type: 'lang',
+                regex: /\[\^([^\]]+)\]:\s*(.*)/g,
+                replace: function (match, name, text) {
+                    return '<div id="fn:' + name + '" class="footnote"><sup>' + name + '</sup>: ' + text + ' <a href="#fnref:' + name + '" title="return to article">↩</a></div>';
+                }
+            }];
+        });
+
+        // Custom extension for strikethrough
+        showdown.extension('strikethrough', function () {
+            return [{
+                type: 'lang',
+                regex: /~(~\w+~)~/g,
+                replace: function (match, text) {
+                    return '<del>' + text + '</del>';
+                }
+            }];
+        });
+
+        // Custom extension for highlight
+        showdown.extension('highlight', function () {
+            return [{
+                type: 'lang',
+                regex: /==([^=]+)==/g,
+                replace: function (match, text) {
+                    return '<mark>' + text + '</mark>';
+                }
+            }];
+        });
+
+        document.getElementById('markdown-input').addEventListener('input', function () {
+            var markdownText = this.value;
+            var converter = new showdown.Converter({
+                extensions: ['footnotes', 'strikethrough', 'highlight'],
+                tables: true,
+                strikethrough: true
+            });
+            var html = converter.makeHtml(markdownText);
+            document.getElementById('html-output').innerHTML = html;
+        });
+
+        // Example Markdown content with blockquote, table, strikethrough, and highlight
+        var exampleMarkdown = `
+# Example Article
+
+This is a sample article written in Markdown.
+
+## Subheading
+
+Here is some more text under a subheading.
+
+- List item 1
+- List item 2
+- List item 3
+
+\`\`\`javascript
+// Example code block
+function greet(name) {
+  return 'Hello, ' + name + '!';
+}
+console.log(greet('World'));
+\`\`\`
+
+> This is a blockquote.
+
+This is a reference to a footnote[^1].
+
+[^1]: This is the footnote.
+
+Here is a table:
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+
+Here is some ~~strikethrough~~ text.
+
+Here is some ==highlighted== text.
+
+[Visit Google](https://www.google.com)
+    `;
+        document.getElementById('markdown-input').value = exampleMarkdown;
+        document.getElementById('markdown-input').dispatchEvent(new Event('input'));
+    </script>
+</body>
+
+</html>
