@@ -2,105 +2,95 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Arbaz Hussain</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet" />
+
   <style>
-      @media only screen and (max-width: 768px){
+    /* GLOBAL STYLES */
     html,
-    body{
-    width:100%;
-    overflow-x:hidden;
-    }
-}
-    h3 {
-      font-weight: bold;
-    }
-
-    .article {
-      display: inline-block;
-      width: 30%;
-      margin: 10px;
-      text-align: center;
-    }
-
-    .button {
-      background-color: #4CAF50;
-      /* Green */
-      border: none;
-      color: white;
-      padding: 16px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      transition-duration: 0.4s;
-      cursor: pointer;
-    }
-
-    .button5 {
-      background-color: white;
-      color: black;
-      border: 2px solid #555555;
-    }
-
-    .button5:hover {
-      background-color: #555555;
-      color: white;
-    }
-  </style>
-
-</head>
-
-  <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
     }
 
+    /* HEADINGS & TITLES */
+    h1,
+    h2,
+    h3,
+    h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      margin-top: 10;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Container Sections - Reduced Spacing */
+    section.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      /* Adjust to taste */
+    }
+
+    /* Remove extra spacing after sections */
+    section.container+section.container {
+      margin-top: 10;
+      padding-top: 0;
+      /* Minimizes spacing between consecutive sections */
+    }
+
+    hr {
+      border: 1px solid #bebebe;
+      margin: 0.5rem 0;
+      /* Tighter spacing for the horizontal rule */
+    }
+
+    /* NAVIGATION (DESKTOP & MOBILE) */
     .site-header {
-      background-color: white;
+      background-color: #fff;
       border-bottom: 1px solid #ddd;
-      padding: 10px 0;
     }
 
     .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      padding: 10px 20px;
     }
 
     .site-title {
-      font-size: 1.5em;
+      font-size: 1.5rem;
       text-decoration: none;
-      color: black;
+      color: #000;
     }
 
-    .trigger {
-      display: flex;
-      gap: 15px;
-    }
-
-    .page-link {
+    .trigger a {
       text-decoration: none;
-      color: black;
-      font-size: 1em;
-      border: none !important;
+      color: #000;
+      margin-left: 15px;
+      transition: color 0.3s ease;
     }
 
-    .page-link:hover {
-      text-decoration: underline;
+    .trigger a:hover {
+      color: #555;
     }
 
+    /* MOBILE MENU */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -119,7 +109,7 @@
       display: none;
       flex-direction: column;
       gap: 10px;
-      background-color: white;
+      background-color: #fff;
       padding: 10px 0;
       position: absolute;
       top: 60px;
@@ -131,7 +121,7 @@
     .trigger-mobile a {
       padding: 10px 20px;
       border-bottom: 1px solid #ddd;
-      color: black;
+      color: #000;
       text-decoration: none;
     }
 
@@ -139,39 +129,123 @@
       background-color: #f1f1f1;
     }
 
+    .trigger-mobile.show {
+      display: flex;
+    }
+
     @media (max-width: 768px) {
       .trigger {
         display: none;
       }
-      
+
       .hamburger {
         display: flex;
       }
+    }
 
-      .trigger-mobile.show {
-        display: flex;
-      }
+    /* BUTTONS */
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .button5 {
+      background-color: #ffffff;
+      color: black;
+      border: 2px solid #555555;
+    }
+
+    .button5:hover {
+      background-color: #555555;
+      color: white;
+    }
+
+    /* ARTICLES & CARDS */
+    .article,
+    .book,
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .article h5.title {
+      margin-bottom: 0.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    li::before {
+      content: "• ";
+      color: #007BFF;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    /* MINOR SPACING REFINEMENTS */
+    .mb-3,
+    .mb-4 {
+      margin-bottom: 1rem !important;
+    }
+
+    .lead {
+      margin-bottom: 0;
+      /* Less spacing under lead paragraphs */
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrapper">
       <a class="site-title" href="/">Arbaz Hussain</a>
-      <div class="trigger">
-      <a class="page-link" href="/blog">Blog</a>
-      </div>
+      <nav class="trigger">
+        <a href="/blog">Blog</a>
+      </nav>
       <div class="hamburger" id="hamburger">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
     </div>
+    <!-- Mobile Menu -->
     <div class="trigger-mobile" id="trigger-mobile">
-      <a class="page-link" href="/blog">Blog</a>
+      <a href="/blog">Blog</a>
     </div>
   </header>
 
+  <!-- Hamburger Toggle Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const triggerMobile = document.getElementById('trigger-mobile');
@@ -180,612 +254,583 @@
       triggerMobile.classList.toggle('show');
     });
   </script>
-<body>
-  <div class="container my-5">
-    <h3>Hi, there!</h3>
-    <h3 class="lead">
-      <br>
-      I'm Arbaz Hussain, located in INDIA 🇮🇳. I am currently employed as a <b style="color: blue;">Smart
-        contract security triager</b> at <strong>Immunefi</strong>, with a strong inclination towards Blockchain & Web
-      security research.
-      <br><br>
-      My professional interests revolve around blockchain and web technologies, with a strong desire to conduct significant
-      security research in these areas.
 
-      <br><br>When I'm not working, I enjoy immersing myself in diverse cultures and embarking on new travel adventures.
-      I'm also a passionate learner of human
-      behaviors, self-awareness and religious philosophies, which allows me to broaden my perspective and understanding
-      of
-      the
-      world.
-    </h3> <br>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- OVERVIEW -->
+    <section class="container">
+      <h3>Welcome!</h3>
+      <p class="lead" style="font-size:1.15rem; line-height:1.6;">
+        I’m <strong style="color:blue;">Arbaz Hussain</strong> from <strong>India 🇮🇳</strong> — a
+        <strong style="color:blue;">Smart Contract Security Triager</strong> at
+        <strong>Immunefi</strong>. My passion for <strong>blockchain</strong> and <strong>web security</strong> powers
+        my quest to keep the decentralized world safe. My work revolves around deep-dive security research to detect
+        vulnerabilities before they become a threat.
+        <br><br>
+        When I’m not diving into code, you’ll find me exploring new cultures, chasing travel adventures, or getting lost in deep
+        thoughts about philosophy, self-awareness, and human behaviors. 
+        <br><br>
+        From trekking in the Himalayas to reflecting on life’s
+        big questions, I believe every experience adds a new layer to how we see the worldand ourselves.
+      </p> <br>
 
-    <a href="https://medium.com/@arbazhussain"><i class="fab fa-medium" style="font-size: 24px;"></i></a>
-    <a href="https://github.com/arbazkiraak"><i class="fab fa-github" style="font-size: 24px;"></i></a>
-    <a href="https://twitter.com/arbazkiraak"><i class="fab fa-twitter" style="font-size: 24px;"></i></a>
-
-    <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@arbazhussain" data-maxcols="3" data-layout="grid"
-      data-poststyle="inline" data-readmore="Read the rest" data-buttonclass="btn btn-primary" data-offset="-100"></div>
-
-
-    <br><br>
-    <div class="row mt-15" id="experience">
-      <div class="col-md-20">
-        <h3>Experience</h3>
-        <hr style="border: 1px solid #bebebe;">
-
-        <ul>
-          <li>
-            Full Time Bug Bounty Hunter - March, 2016 - March, 2022.
-          </li>
-          <li>
-            Co-founded SecurityLit (Product Engineering) - June 2019 - October 2021
-          </li>
-          <li>
-            Web Application Security Triager <a href="https://immunefi.com">@immunefi</a> - April 2022 -
-            <strong>Present</strong>
-          </li>
-          <li>
-            Smart Contract Security Triager <a href="https://immunefi.com">@immunefi</a> - November 2022 -
-            <strong>Present</strong>
-          </li>
-        </ul>
+      <!-- Social Icons -->
+      <div>
+        <a href="https://medium.com/@arbazhussain" style="margin-right:10px;"><i class="fab fa-medium"
+            style="font-size: 24px;"></i></a>
+        <a href="https://github.com/arbazkiraak" style="margin-right:10px;"><i class="fab fa-github"
+            style="font-size: 24px;"></i></a>
+        <a href="https://twitter.com/arbazkiraak" style="margin-right:10px;"><i class="fab fa-twitter"
+            style="font-size: 24px;"></i></a>
       </div>
-    </div>
+      <br />
 
-    <div class="row mt-15" id="skills">
-      <div class="col-md-20">
-        <h3>Skills</h3>
-        <hr style="border: 1px solid #bebebe;">
+      <!-- Medium RSS Embed -->
+      <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@arbazhussain" data-maxcols="3"
+        data-layout="grid" data-poststyle="inline" data-readmore="Read the rest" data-buttonclass="btn btn-primary"
+        data-offset="-100"></div>
+    </section>
 
-        <ul>
+    <!-- EXPERIENCE -->
+    <section class="container">
+      <h3>Experience</h3>
+      <hr />
+      <ul>
+        <li>Full-Time Bug Bounty Hunter (Mar 2016 - Mar 2022)</li>
+        <li>Co-founded SecurityLit (Product Engineering) (June 2019 - Oct 2021)</li>
+        <li>Web Application Security Triager at <a href="https://immunefi.com" target="_blank">Immunefi</a> (Apr 2022 -
+          Present)</li>
+        <li>Smart Contract Security Triager at <a href="https://immunefi.com" target="_blank">Immunefi</a> (Nov 2022 -
+          Present)</li>
+      </ul>
+    </section> <br>
 
-  <li>
-    🛡️ Ethereum-based Blockchain Application Security Testing, encompassing smart Contract and DApp auditing.
-  </li>
-  <li>
-      🔒 Web Application Security Testing.
-  </li>
-  <li>
-      📱 Mobile Application Security Testing for iOS and Android platforms.
-  </li>
-  <li>
-      ☁️ Cloud Security Architecture and Implementation, including AWS, Azure, and GCP.
-  </li>
-  <li>
-      🛠️ DevSecOps focusing on Web security.
-  </li>
-  <li>
-      🌐 Developing Onchain Threat Monitoring Solutions on the Blockchain.
-  </li>
-  <li>
-      🎥 Creating dynamic and engaging visual content using motion graphics with Adobe Premiere.
-  </li>
+    <!-- SKILLS -->
+    <section class="container">
+      <h3>Skills</h3>
+      <hr />
+      <ul>
+        <li>🛡️ Ethereum-based Blockchain Security (Smart Contracts & DApp Auditing)</li>
+        <li>🔒 Web Application Security Testing</li>
+        <li>📱 Mobile Application Security (iOS & Android)</li>
+        <li>☁️ Cloud Security (AWS, Azure, GCP)</li>
+        <li>🛠️ DevSecOps & Web Security</li>
+        <li>🌐 Onchain Threat Monitoring Solutions</li>
+        <li>🎥 Motion Graphics & Video Editing (Adobe Premiere)</li>
+        <li>💻 Scripting Languages: Python, JavaScript, Bash</li>
+        <li>💻 Programming Languages: Golang, Rust, Solidity</li>
+      </ul>
+    </section> <br>
+
+    <!-- ACKNOWLEDGEMENTS -->
+    <section class="container">
+      <h3>Acknowledgements</h3>
+      <hr />
+      <ul>
+        <li>Top 100 hackers on HackerOne (2020)</li>
+        <li>Synack Red Team Member for VAPT</li>
+        <li>250+ valid vulnerability reports via HackerOne (impact score of 20)</li>
+        <li>500+ overall valid reports across multiple platforms</li>
+        <li>Acknowledged by 300+ companies, including Microsoft, Google, PayPal, etc.</li>
+      </ul>
+    </section>
+
+    <!-- SPEAKER @ CONFERENCES -->
+    <section class="container"> <br>
+      <h3>Speaker @ Conferences</h3>
+      <hr />
+      <ul style="list-style-type: none;">
         <li>
-          💻 Scripting languages: Python, JavaScript, Bash.
+          <strong>BSides Ahmedabad 24:</strong>
+          <a href="https://2k24.bsidesahmedabad.in/" target="_blank">Web3 Bug Bounties: Why & How to Get
+            Started</a><br />
+          <i class="fab fa-twitter"></i>
+          <a href="https://x.com/ArbazKiraak/status/1846085873533649253">Slides</a> &nbsp;
+          <i class="fab fa-youtube"></i>
+          <a href="https://www.youtube.com/watch?v=09gRXZ69QAs">Video</a>
+        </li>
+        <br />
+        <li>
+          <strong>DeFi Security Summit 24:</strong>
+          <a href="https://defisecuritysummit.org/" target="_blank">The Bug Hunter’s Guide to High-Quality
+            Reporting</a><br />
+          <i class="fab fa-twitter"></i>
+          <a href="https://x.com/ArbazKiraak/status/1856403528950124634">Slides</a> &nbsp;
+          <i class="fab fa-youtube"></i>
+          <a href="https://www.youtube.com/watch?v=Pgz3swpVT6w">Video</a>
+        </li>
+        <br />
+        <li>
+          <strong>BSides Ahmedabad 22:</strong>
+          <a href="https://bsidesahmedabad.in/2022/Schedule.html" target="_blank">The Dark Side of DeFi</a><br />
+          <i class="fab fa-twitter"></i>
+          <a href="https://twitter.com/ArbazKiraak/status/1576147520203657216">Slides</a> &nbsp;
+          <i class="fab fa-youtube"></i>
+          <a href="https://www.youtube.com/watch?v=09gRXZ69QAs">Video</a>
+        </li>
+        <br />
+        <li>
+          <strong>NULL-HYD 22:</strong>
+          <a href="https://twitter.com/immunefi/status/1531232337681338369" target="_blank">
+            Introduction to Web3 & Security Pitfalls
+          </a>
+        </li>
+        <br />
+        <li>
+          <strong>ThreatCon 22:</strong>
+          <a href="https://2022.threatcon.io/agenda" target="_blank">Tour of Common Web3 Vulnerabilities</a>
+        </li>
+        <br />
+        <li>
+          <strong>Web3Conf Goa 23:</strong>
+          <a href="https://web3confindia.xyz/" target="_blank">Navigating EVM Chain Security: Smart Contract
+            Vulnerabilities</a><br />
+          <i class="fab fa-youtube"></i>
+          <a href="https://youtu.be/_NLXPdQ8AoQ?si=x3Fdf_Ti0zoQom34">Video</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- OPEN SOURCE PROJECTS -->
+    <section class="container"> <br>
+      <h3>Open Source Projects</h3>
+      <p>Maintaining open-source projects in Web3 security.</p>
+      <hr />
+      <ul>
+        <li>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/immunefi-team/forge-poc-templates" target="_blank">
+            EVM Vulnerabilities PoC Templates
+          </a>
+          <p style="margin-left: 25px;">
+            Creating reusable, easily modifiable PoC examples for various EVM-based vulnerabilities.
+          </p>
         </li>
         <li>
-          💻 Programming languages: Golang, Rust, Solidity.
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/immunefi-team/immunefi-cli/" target="_blank">
+            Immunefi CLI Tool
+          </a>
+          <p style="margin-left: 25px;">
+            A Rust-based CLI tool that automates white-hat bug hunting processes.
+          </p>
         </li>
-        </ul>
-      </div>
-    </div>
+      </ul>
+    </section>
 
+    <!-- WORK PROJECTS -->
+    <section class="container"> <br>
+      <h3>Work Projects</h3>
+      <p>Contributions to the Web3 community at Immunefi.</p>
+      <hr />
+      <ul>
+        <li><i class="fab fa-github"></i> <a
+            href="https://github.com/immunefi-team/vaults/blob/main/audits/2024-01-15%20-%20Immunefi%20-%20Internal%20Audit%20of%20the%20Vault%20System%20and%20Arbitration.pdf"
+            target="_blank">Immunefi - Bounty Boosts Bug Reports</a></li>
+        <li><i class="fab fa-github"></i> <a
+            href="https://github.com/immunefi-team/vaults/blob/main/audits/2024-01-15%20-%20Immunefi%20-%20Internal%20Audit%20of%20the%20Vault%20System%20and%20Arbitration.pdf"
+            target="_blank">Immunefi - Internal Audit of the Vault System & Arbitration</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/immunefi-team/community-challenges"
+            target="_blank">Immunefi Community Challenges</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/wormhole-uninitialized-proxy-bugfix-review-90250c41a43a"
+            target="_blank">Wormhole Uninitialized Proxy Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/how-erc-standards-work-part-1-c9795803f459" target="_blank">How ERC
+            Standards Work - Part 1</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/synthetix-logic-error-bugfix-review-40da0ead5f4f"
+            target="_blank">Synthetix Logic Error Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/polygon-consensus-bypass-bugfix-review-7076ce5047fe"
+            target="_blank">Polygon Consensus Bypass Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/moonbeam-missing-call-check-bugfix-review-6279d609bdc5"
+            target="_blank">Moonbeam Missing Call Check Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/sense-finance-access-control-issue-bugfix-review-32e0c806b1a0"
+            target="_blank">Sense Finance Access Control Issue Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/aurora-withdrawal-logic-error-bugfix-review-c5b4e30a9160"
+            target="_blank">Aurora Withdrawal Logic Error Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a href="https://medium.com/immunefi/immunefi-poc-templates-4345f098ac69"
+            target="_blank">Immunefi POC Templates</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/beanstalk-logic-error-bugfix-review-4fea17478716"
+            target="_blank">Beanstalk Logic Error Bugfix Review</a></li>
+        <li><i class="fab fa-medium"></i> <a
+            href="https://medium.com/immunefi/dfx-finance-rounding-error-bugfix-review-17ba5ffb4114" target="_blank">DFX
+            Finance Rounding Error Bugfix Review</a></li>
+      </ul>
+    </section>
 
-    <br><br>
-    <div class="row mt-15" id="experience">
-      <div class="col-md-20">
-        <h3>Acknowledgements</h3>
-        <hr style="border: 1px solid #bebebe;">
-        <ul>
-          <li>Ranked among the top 100 hackers on the HackerOne platform of all time in 2020.</li>
-          <li>An active member of Synack Red Teaming performing Vulnerability Assessment and Penetration Testing (VAPT).
-          </li>
-          <li>Individually reported 250+ valid vulnerability reports through the HackerOne platform alone, with an
-            impact
-            score of 20.</li>
-          <li>Overall reported more than 500+ vulnerability reports from all bug bounty platforms and external bug
-            bounty
-            programs.</li>
-          <li>Received acknowledgments from over 300 companies for reporting valid security vulnerabilities, including
-            Microsoft, Facebook, Google, Verizon Media, AT&T, Unity, Paypal, and Mediafire, among others.</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div class="row mt-5" id="bucketlist">
-      <div class="col-md-8">
-        <h3>Speaker @Conferences</h3>
-
-        <hr style="border: 1px solid #bebebe;">
-
-            <strong>Bsides Ahmedabad 24, <a href="https://2k24.bsidesahmedabad.in/" target="_blank">Web3 Bug Bounties : Why and How to get started</a></strong>
-            
-            <br>
-            <i class="fab fa-twitter"></i><a href="https://x.com/ArbazKiraak/status/1846085873533649253"
-              class="card-link">SLIDES</a> &nbsp;&nbsp;
-            <i class="fab fa-youtube"></i><a href="https://www.youtube.com/watch?v=09gRXZ69QAs" class="card-link">VIDEO</a>
-            
-            <br><br>
-
-
-          <strong>Defi Security Summit 24, <a href="https://defisecuritysummit.org/" target="_blank">The Bug Hunter’s Guide to High-Quality Reporting</a></strong>
-          
-          <br>
-          <i class="fab fa-twitter"></i><a href="https://x.com/ArbazKiraak/status/1856403528950124634"
-            class="card-link">SLIDES</a> &nbsp;&nbsp;
-          <i class="fab fa-youtube"></i><a href="https://www.youtube.com/watch?v=Pgz3swpVT6w" class="card-link">VIDEO</a>
-          
-          <br><br>
-
-        <strong>Bsides Ahmedabad 22, <a href="https://bsidesahmedabad.in/2022/Schedule.html" target="_blank">The Dark
-            Side of DeFi</a></strong>
-        
-        <br>
-        <i class="fab fa-twitter"></i><a href="https://twitter.com/ArbazKiraak/status/1576147520203657216"
-          class="card-link">SLIDES</a> &nbsp;&nbsp;
-        <i class="fab fa-youtube"></i><a href="https://www.youtube.com/watch?v=09gRXZ69QAs" class="card-link">VIDEO</a>
-
-        <br><br>
-
-
-        <strong>NULL-HYD 22, <a href="https://twitter.com/immunefi/status/1531232337681338369"
-            target="_blank">Introduction to Web3 & security pitfalls by
-            Arbaz Hussain</a></strong>
-
-        <br><br>
-
-        <strong>ThreatCon 22, <a href="https://2022.threatcon.io/agenda" target="_blank">Tour of Common Web3
-            Vulnerabilities</a></strong>
-
-        <br><br>
-        
-        <strong>Web3Conf Goa 23, <a href="https://web3confindia.xyz/" target="_blank">Navigating EVM Chain Security: Smart contract vulnerabilities</a></strong><br>
-        <i class="fab fa-youtube"></i><a href="https://youtu.be/_NLXPdQ8AoQ?si=x3Fdf_Ti0zoQom34" class="card-link">VIDEO</a>
-        </h3>
-      </div>
-      </div>
-
-
-    <div class="row mt-5" id="oos">
-    <div class="col-md-12">
-            <h3>Open Source Projects</h3>
-            <p>Maintaining open-source projects in web3 security.</p>
-            <hr style="border: 1px solid #bebebe;">
-            <ul>
-              <li><i class="fab fa-github"></i> <a href="https://github.com/immunefi-team/forge-poc-templates"
-                  title="Immunefi Community Challenges">EVM Vulnerabilities PoC templates</a><br></li> 
-                  
-                  <p>Creating Proof of Concept (PoC) examples that are reusable and easily modifiable for various vulnerabilities based on
-                  the Ethereum Virtual Machine (EVM).</p>
-                  
-              <li><i class="fab fa-github"></i> <a href="https://github.com/immunefi-team/immunefi-cli/"
-                  title="Immunefi Community Challenges">Immunefi CLI tool</a><br></li> 
-                  
-                  <p>Immunefi CLI tool, written in Rust, dedicated to automating and assisting the white-hat process of bug hunting</p>
-
-            </ul>
-            </div>
-          </div>
-
-    <div class="row mt-5" id="skills">
-      <div class="col-md-12">
-        <h3>Work Projects</h3>
-        <p>Contributed to the web3 community by producing the following content at Immunefi.</p>
-        <hr style="border: 1px solid #bebebe;">
-        <ul>
-          <li><i class="fab fa-github"></i> <a
-              href="https://github.com/immunefi-team/vaults/blob/main/audits/2024-01-15%20-%20Immunefi%20-%20Internal%20Audit%20of%20the%20Vault%20System%20and%20Arbitration.pdf"
-              title="Immunefi Community Challenges">Immunefi - Bounty Boosts Bug Reports</a><br></li>
-
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/immunefi-team/vaults/blob/main/audits/2024-01-15%20-%20Immunefi%20-%20Internal%20Audit%20of%20the%20Vault%20System%20and%20Arbitration.pdf"
-                        title="Immunefi Community Challenges">Immunefi - Internal Audit of the Vault System and Arbitration</a><br></li>
-          <li><i class="fab fa-github"></i> <a href="https://github.com/immunefi-team/community-challenges"
-              title="Immunefi Community Challenges">Immunefi Community Challenges</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/wormhole-uninitialized-proxy-bugfix-review-90250c41a43a"
-              title="Wormhole Uninitialized Proxy Bugfix Review">Wormhole Uninitialized Proxy Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/how-erc-standards-work-part-1-c9795803f459"
-              title="How ERC Standards Work - Part 1">How ERC Standards Work - Part 1</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/synthetix-logic-error-bugfix-review-40da0ead5f4f"
-              title="Synthetix Logic Error Bugfix Review">Synthetix Logic Error Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/polygon-consensus-bypass-bugfix-review-7076ce5047fe"
-              title="Polygon Consensus Bypass Bugfix Review">Polygon Consensus Bypass Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/moonbeam-missing-call-check-bugfix-review-6279d609bdc5"
-              title="Moonbeam Missing Call Check Bugfix Review">Moonbeam Missing Call Check Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/sense-finance-access-control-issue-bugfix-review-32e0c806b1a0"
-              title="Sense Finance Access Control Issue Bugfix Review">Sense Finance Access Control Issue Bugfix
-              Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/polygon-consensus-bypass-bugfix-review-7076ce5047fe"
-              title="Polygon Consensus Bypass Bugfix Review"> Polygon Consensus Bypass Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i> <a
-              href="https://medium.com/immunefi/aurora-withdrawal-logic-error-bugfix-review-c5b4e30a9160"
-              title="Aurora Withdrawal Logic Error Bugfix Review"> Aurora Withdrawal Logic Error Bugfix Review</a><br>
-          </li>
-
-          <li><i class="fab fa-medium"></i><a href="https://medium.com/immunefi/immunefi-poc-templates-4345f098ac69"
-              title="Immunefi POC Templates"> Immunefi
-              POC Templates</a><br></li>
-          <li><i class="fab fa-medium"></i><a
-              href="https://medium.com/immunefi/beanstalk-logic-error-bugfix-review-4fea17478716"
-              title="Beanstalk Logic Error Bugfix Review"> Beanstalk Logic Error Bugfix Review</a><br></li>
-          <li><i class="fab fa-medium"></i><a href="https://medium.com/immunefi/dfx-finance-rounding-error-bugfix-review-17ba5ffb4114"
-              title="Beanstalk Logic Error Bugfix Review"> DFX Finance Rounding Error Bugfix Review</a><br></li>
-        </ul>
-      </div>
-    </div>
-
-
-
-
-
-
-    <div class="row mt-5" id="bucketlist">
-      <div class="col-md-8">
-        <h3>Personal Projects</h3>
-        <hr style="border: 1px solid #bebebe;">
-        <br>
-        <div class="row">
-          <div class="col-md-20">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">CIMEX CONTINUOUS SECURITY RECON FRAMEWORK</h5>
-                <p class="card-text">The Cimex project is designed to provide automated security monitoring solutions
-                  and reconnaissance processes. To this
-                  end, I developed a framework that streamlines bug bounty manual work and employs scalable technologies
-                  such as AWS
-                  Lambda, Celery tasks, Redis queue, and the Django framework. As part of the documentation process, I
-                  have also created a
-                  brief video that provides an overview of the framework's key features and functionality.</p>
-                <i class="fab fa-youtube"></i><a href="https://www.youtube.com/watch?v=tBn0wLuPcVc"
-                  class="card-link">Link to Video</a>
-                <i class="fab fa-time">Mar 5, 2020</i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-20">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">LINK DUMPER BURP PLUGIN</h5>
-                <p class="card-text">Plugin provides the ability to extract links from Burp Proxy JavaScript and CSS
-                  files utilizing multiple regex patterns.
-                  Key features include auto-matching and an auto URL builder that extracts endpoints from the files.</p>
-                <i class="fab fa-github"></i><a href="https://github.com/arbazkiraak/LinksDumper"
-                  class="card-link">GitHub Repository</a>
-                <i class="fab fa-time">Aug 27, 2019</i>
-              </div>
+    <!-- PERSONAL PROJECTS -->
+    <section class="container"> <br>
+      <h3>Personal Projects</h3>
+      <hr />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5 class="card-title">CIMEX CONTINUOUS SECURITY RECON FRAMEWORK</h5>
+              <p class="card-text">
+                Cimex automates security monitoring and reconnaissance, streamlining bug bounty workflows.
+                Utilizes AWS Lambda, Celery tasks, Redis queues, and Django for efficient scaling.
+              </p>
+              <i class="fab fa-youtube"></i>
+              <a href="https://www.youtube.com/watch?v=tBn0wLuPcVc" target="_blank">Video Overview</a>
+              <br />
+              <small class="text-muted">Mar 5, 2020</small>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-20">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">BROKEN LINK HIJACKING BURP PLUGIN</h5>
-                <p class="card-text">Automated plugin provides a streamlined method of detecting broken links within
-                  Burp Proxy responses. It achieves this by
-                  performing DNS resolution to determine whether the target links are viable options for exploitation.
-                </p>
-                <i class="fab fa-github"></i><a href="https://github.com/arbazkiraak/BurpBLH" class="card-link">GitHub
-                  Repository</a>
-                <i class="fab fa-time">Sep 13, 2019</i>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-20">
-            <div class="card mb-3">
-              <div class="card-body">
-                <h5 class="card-title">HACK BOT - TELEGRAM</h5>
-                <p class="card-text">This was the first project I had worked on to run penetration testing/ bug
-                  bounty tasks using a telegram bot system.</p>
-                <i class="fab fa-github"></i><a href="https://github.com/arbazkiraak/hackbot" class="card-link">GitHub
-                  Repository</a> <br>
-                <i class="fab fa-medium"></i><a
-                  href="https://medium.com/@arbazhussain/hackbot-update-v1-2-whats-new-db82e6038edd"
-                  class="card-link">Medium Post 1</a> <br>
-                <i class="fab fa-medium"></i><a
-                  href="https://medium.com/@arbazhussain/telegram-bot-for-hacking-pentesting-b7856db28ef"
-                  class="card-link">Medium Post 2</a>
-                <i class="fab fa-time">Aug 29, 2017</i>
-              </div>
+
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">LINK DUMPER BURP PLUGIN</h5>
+              <p class="card-text">
+                Extracts links from JS/CSS files intercepted by Burp Proxy using multiple regex patterns.
+                Features auto-link building to accelerate deeper analysis.
+              </p>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/arbazkiraak/LinksDumper" target="_blank">GitHub Repository</a>
+              <br />
+              <small class="text-muted">Aug 27, 2019</small>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">BROKEN LINK HIJACKING BURP PLUGIN</h5>
+              <p class="card-text">
+                Automates detection of broken links from Burp Proxy responses. Performs DNS resolution to identify
+                potential hijackable domains.
+              </p>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/arbazkiraak/BurpBLH" target="_blank">GitHub Repository</a>
+              <br />
+              <small class="text-muted">Sep 13, 2019</small>
+            </div>
+          </div>
+        </div>
 
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-KvwN45QVpkCXGt9XyVpmoW/b/aK7/odIKh1LHS7v8ZZn+BnTjde3tbqjj9XQvF8W"
-        crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-
-      <br><br>
-
-      <div class="container">
-        <hr style="border: 1px solid #bebebe;">
-        <h3 style="text-align:center;">Medium blogs</h3>
-        <hr style="border: 1px solid #bebebe;">
-
-        <div class="articles"></div>
-
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">HACK BOT - TELEGRAM</h5>
+              <p class="card-text">
+                My first initiative to run penetration testing and bug bounty tasks
+                seamlessly via a Telegram bot system.
+              </p>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/arbazkiraak/hackbot" target="_blank">GitHub Repository</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/hackbot-update-v1-2-whats-new-db82e6038edd"
+                target="_blank">Medium Post 1</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/telegram-bot-for-hacking-pentesting-b7856db28ef"
+                target="_blank">Medium Post 2</a>
+              <br />
+              <small class="text-muted">Aug 29, 2017</small>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <style>
-      .article {
-        border: 1px solid black;
-        padding: 10px;
-      }
+    <!-- MEDIUM BLOGS VIA RSS2JSON (SECONDARY SECTION) -->
+    <section class="container"> <br>
+      <h3 class="text-center" style="margin-bottom: 0.5rem;">More from My Medium</h3>
+      <hr />
+      <div class="articles"></div>
+      <div class="article">
+        <h5 class="title">More Articles</h5>
+        <button class="button button5">
+          <a href="https://medium.com/@arbazhussain" target="_blank" style="color:black; text-decoration:none;">
+            <i class="fab fa-medium" style="font-size: 22px;"></i>
+            Medium.com
+          </a>
+        </button>
+      </div>
+    </section>
 
-      @media only screen and (max-width: 600px) {
-        .article {
-          width: 100%;
-          border-radius: 0;
-        }
-      }
-    </style>
+    <!-- AJAX FETCH FOR BLOG POSTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      function fetchblog() {
+        $.ajax({
+          url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbazhussain",
+          dataType: 'jsonp',
+          success: function (data) {
+            let items = data.items;
+            for (let item of items) {
+              let title = item.title;
+              let pubdate = item.pubDate;
+              let description = item.description;
+              let link = item.link;
 
-<script>
-  function fetchblog() {
-    $.ajax({
-      url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbazhussain",
-      data: {
-        format: 'json'
-      },
-      error: function () {
-        $('#info').html('<p>An error has occurred</p>');
-      },
-      dataType: 'jsonp',
-      success: function (data) {
-        let items = data.items;
-        for (let item of items) {
-          let title = item.title;
-          let pubdate = item.pubDate;
-          let description = item.description;
+              // Extract image from description
+              let thumb = "";
+              let imgSrcMatch = description.match(/<img.*?src="(.*?)"/);
+              if (imgSrcMatch && imgSrcMatch.length > 1) {
+                thumb = imgSrcMatch[1];
+              }
 
-          // Extract image URL from the description
-          let thumb = "";
-          let imgSrcMatch = description.match(/<img.*?src="(.*?)"/);
-          if (imgSrcMatch && imgSrcMatch.length > 1) {
-            thumb = imgSrcMatch[1];
+              let output = `
+                <div class="article">
+                  <h5 class="title">${title}</h5>
+                  <br />
+                  <img src="${thumb}" height="100" width="180" alt="Article Image" />
+                  <br /><br />
+                  <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i>
+                  <br />
+                  <button class="button button5" style="color:black;" onclick="window.open('${link}', '_blank')">
+                    Read
+                  </button>
+                </div>`;
+              $('.articles').append(output);
+            }
+          },
+          error: function () {
+            $('.articles').html('<p>An error has occurred while fetching the blog.</p>');
           }
+        });
+      }
+      fetchblog();
+    </script>
 
-          let link = item.link;
-          let tags = item.categories;
-          let output = `<div class="article">
-            <h5 class="title">${title}</h5><br>
-            <img src="${thumb}" height="100" width="180" alt="article heading image"><br><br>
-            <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i><br>
-            <button class="button button5" onclick="window.open('${link}', '_blank')" style="color:black;">Read</button>
-          </div>`;
-          $('.articles').append(output);
-        }
-      },
-      type: 'GET'
-    });
-  }
-  fetchblog();
-</script>
-
-
-    <div class="article">
-      <h5 class="title">More articles</h5><br>
-      <button class="button button5"><a href="https://medium.com/@arbazhussain" target="_blank"><i class="fab fa-medium"
-            style="font-size: 22px;"></i>Medium.com</a></button>
-    </div>
-
-
-    <br><br>
-
-    <div class="container">
-      <div class="row mt-5" id="bucketlist">
-        <div class="col-md-8">
-          <h3>Twitter Timeline</h3>
-          <hr style="border: 1px solid #bebebe;">
-          <br>
-
-          <div id="info"></div>
-
-          <div class="twitter">
-<blockquote class="twitter-tweet">
-  <p lang="en" dir="ltr">We are releasing weekly community challenges for beginners to learn about the common security
-    pitfalls of smart contracts. The repository includes a write-up and runnable proof-of-concept code for each
-    challenge. <a href="https://t.co/u2Fpi91G1H">https://t.co/u2Fpi91G1H</a> <a
-      href="https://twitter.com/immunefi?ref_src=twsrc%5Etfw">@immunefi</a></p>&mdash; Arbaz Hussain (@ArbazKiraak) <a
-    href="https://twitter.com/ArbazKiraak/status/1499105105005932544?ref_src=twsrc%5Etfw">March 2, 2022</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div> <br><blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">Brilliant piece of postmortem written by <a
-                href="https://twitter.com/sherlockdefi?ref_src=twsrc%5Etfw">@sherlockdefi</a> on a complex cross-protocol
-              reentrancy state manipulation vuln.<br><br>I really wish all bug reports and postmortems were as detailed. <a
-                href="https://t.co/8SooOJycNl">https://t.co/8SooOJycNl</a></p>&mdash; Arbaz Hussain (@ArbazKiraak) <a
-              href="https://twitter.com/ArbazKiraak/status/1559943823849320448?ref_src=twsrc%5Etfw">August 17, 2022</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <br><br><br>
-        <hr>
-
-
-        <div class="container">
-          <h3>Book Recommendations</h3>
-          <hr style="border: 1px solid #bebebe;">
-
-          <div class="book">
-            <a href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299">
-              <img src="https://images-na.ssl-images-amazon.com/images/I/51-nXsSRfZL._SX329_BO1,204,203,200_.jpg"
-                height="100" width="100" alt="Atomic Habits book cover">
-              <h3>Atomic Habits</h3>
-            </a>
-            <p>By James Clear</p>
-            <p>A guide to building good habits and breaking bad ones for personal and professional success.</p>
-          </div>
-          <hr>
-          <div class="book">
-            <a href="https://www.amazon.com/Alchemist-Paulo-Coelho/dp/0061122416">
-              <img
-                src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1654371463i/18144590.jpg"
-                height="100" width="100" alt="The Alchemist book cover">
-              <h3>The Alchemist</h3>
-            </a>
-            <p>By Paulo Coelho</p>
-            <p>A story about following your dreams and finding your purpose in life.</p>
-          </div>
-          <hr>
-          <div class="book">
-            <a href="https://www.amazon.com/Forty-Rules-Love-Novel-Rumi/dp/0143118528">
-              <img src="https://images-eu.ssl-images-amazon.com/images/I/91Q4lLuogQL._AC_UL900_SR615,900_.jpg"
-                height="100" width="100" alt="The Forty Rules of Love book cover">
-              <h3>The Forty Rules of Love</h3>
-            </a>
-            <p>By Elif Shafak</p>
-            <p>A novel that interweaves the stories of a modern-day woman and the legendary poet Rumi.</p>
-          </div>
-          <hr>
-          <div class="book">
-            <a href="https://www.amazon.com/Man-Search-Meaning-Viktor-Frankl/dp/080701429X">
-              <img src="https://cdn01.sapnaonline.com/product_media/9781846041242/md_9781846041242.jpg" height="100"
-                width="100" alt="Man's Search for Meaning book cover">
-              <h3>Man's Search for Meaning</h3>
-            </a>
-            <p>By Viktor E. Frankl</p>
-            <p>A memoir and reflection on the author's experiences in Nazi concentration camps and his theory of
-              logotherapy.
-            </p>
-            <hr>
-          </div>
-          <div class="book">
-            <a href="https://www.amazon.com/Telepsychics-Tapping-Hidden-Powers-Mind/dp/0875166212">
-              <img src="https://cdn.shopify.com/s/files/1/0295/3907/4184/products/biqSTAq_496x.jpg?v=1613326868"
-                height="100" width="100" alt="Telepsychics book cover">
-              <h3>Telepsychics</h3>
-            </a>
-            <p>By Joseph Murphy</p>
-            <p>A guide to unlocking the hidden powers of your mind and achieving your goals.</p>
-          </div> <br>
-
-        </div> <br>
-
-
-
-        <div class="container">
-          <h3>Bucket List</h3>
-          <hr style="border: 1px solid #bebebe;">
-
-          <ul>
-            <li>
-              <strike>🤿 PADI Scuba diving course.</strike>
-            </li>
-            <li>
-              <strike>🏕️ Camping at Chandrataal lake, Spiti valley.</strike>
-            </li>
-            <li>
-              <strike>🛣️ Road trip across Northern Himalayas.</strike>
-            </li>
-            <li>
-              <strike>🪂 Paramotoring around Annapurna ranges, Nepal.</strike>
-            </li>
-            <li>
-              <strike>🌉 Bungee jumping.</strike>
-            </li>
-            <li>
-              🎶 Attend Boris Brejcha Music event.
-            </li>
-            <li>
-              🚴‍♀️ Complete a 150km cycling route on Al Qudra track, UAE.
-            </li>
-            <li>
-              🏃‍♂️ Participate in a 50km+ Ultra Hell Race trail running competition.
-            </li>
-            <li>
-              🏄‍♂️ Master the art of surfing in Bali.
-            </li>
-            <li>
-              <strike>⛷️ Learn to Skii at Shymbulak Ski Resort, KZ.</strike>
-            </li>
-            <li>
-              <strike>🏔️ Hike in Pahalgam town, Kashmir.</strike>
-            </li>
-            <li>
-              🧗‍♀️ Certified rock climber.
-            </li>
-            <li>
-              🤿 Certified freediver.
-            </li>
-            <li>
-              <strike>🗻 Climbed Mt. Fuji, Japan.</strike>
-            </li>
-          </ul> <br>
-        </div>
-
-
-
-        <div class="container">
-          <h3>Spotify List</h3>
-          <hr style="border: 1px solid #bebebe;">
-
-          <br>
-
-          <iframe style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/7inHBIM6HHeI8RNK55lHng?utm_source=generator" width="500" height="152"
-            frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
-
-          <iframe style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/5oW66fVQwE2wzkJOTaRPKI?utm_source=generator" width="500"
-            height="152" frameBorder="0" allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-          <iframe style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/6Q4SkRkk8Rb2Kif17hbRXb?utm_source=generator" width="500"
-            height="152" frameBorder="0" allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-        </div>
+    <!-- TWITTER TIMELINE --> <br>
+    <section class="container">
+      <h3>Twitter Timeline</h3>
+      <hr />
+      <div class="twitter mb-4">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            We are releasing weekly community challenges for beginners to learn about the common security pitfalls...
+            <a href="https://t.co/u2Fpi91G1H">https://t.co/u2Fpi91G1H</a>
+            <a href="https://twitter.com/immunefi?ref_src=twsrc%5Etfw">@immunefi</a>
+          </p>
+          &mdash; Arbaz Hussain (@ArbazKiraak)
+          <a href="https://twitter.com/ArbazKiraak/status/1499105105005932544?ref_src=twsrc%5Etfw">March 2, 2022</a>
+        </blockquote>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Brilliant piece of postmortem written by
+            <a href="https://twitter.com/sherlockdefi?ref_src=twsrc%5Etfw">@sherlockdefi</a> on a complex cross-protocol
+            reentrancy...
+            <a href="https://t.co/8SooOJycNl">https://t.co/8SooOJycNl</a>
+          </p>
+          &mdash; Arbaz Hussain (@ArbazKiraak)
+          <a href="https://twitter.com/ArbazKiraak/status/1559943823849320448?ref_src=twsrc%5Etfw">August 17, 2022</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-      <hr>
-      <br>
+    </section>
 
-<div class="container">
-  <h3>2023 Year in Sports : Strava 🏃</h3>
-  <hr style="border: 1px solid #bebebe;">
+    <!-- BOOK RECOMMENDATIONS -->
+    <section class="container">
+      <h3>Book Recommendations</h3>
+      <hr />
+      <!-- 1. Thus Spoke Zarathustra -->
+      <div class="book">
+        <a href="https://www.amazon.com/Thus-Spoke-Zarathustra-Friedrich-Nietzsche/dp/0140441182" target="_blank">
+          <img src="https://storage.jainebooks.org/uploads/front-image/Thus-Spoke-Zarathustra-by-F.-Nietzsche-ebook-cover.jpg"
+            alt="Thus Spoke Zarathustra" height="100" width="100" />
+          <h4>Thus Spoke Zarathustra</h4>
+        </a>
+        <p>By Friedrich Nietzsche</p>
+        <p>An epic philosophical work that challenges and empowers readers to explore the depths of individual purpose.
+        </p>
+      </div>
+      <hr />
+      <!-- 2. Man's Search for Meaning -->
+      <div class="book">
+        <a href="https://www.amazon.com/Man-Search-Meaning-Viktor-Frankl/dp/080701429X" target="_blank">
+          <img src="https://cdn01.sapnaonline.com/product_media/9781846041242/md_9781846041242.jpg"
+            alt="Man's Search for Meaning" height="100" width="100" />
+          <h4>Man's Search for Meaning</h4>
+        </a>
+        <p>By Viktor E. Frankl</p>
+        <p>A profound reflection on surviving the Holocaust and discovering life’s ultimate purpose.</p>
+      </div>
+      <hr />
+      <!-- 3. The Forty Rules of Love -->
+      <div class="book">
+        <a href="https://www.amazon.com/Forty-Rules-Love-Novel-Rumi/dp/0143118528" target="_blank">
+          <img src="https://images-eu.ssl-images-amazon.com/images/I/91Q4lLuogQL._AC_UL900_SR615,900_.jpg"
+            alt="The Forty Rules of Love" height="100" width="100" />
+          <h4>The Forty Rules of Love</h4>
+        </a>
+        <p>By Elif Shafak</p>
+        <p>A mesmerizing story that interweaves the lives of a modern woman and the legendary poet Rumi.</p>
+      </div>
+      <hr />
+      <!-- 4. Limitless by Jim Kwik -->
+      <div class="book">
+        <a href="https://www.amazon.com/Limitless-Upgrade-Yourself-Exceptional-Performance/dp/1401958230"
+          target="_blank">
+          <img src="https://i.scdn.co/image/ab6765630000ba8a2ae40af947d7f44d139948f4"
+            alt="Limitless by Jim Kwik" height="100" width="100" />
+          <h4>Limitless</h4>
+        </a>
+        <p>By Jim Kwik</p>
+        <p>Techniques and mindsets for unleashing your brain’s full capacity and achieving high-performance goals.</p>
+      </div>
+      <hr />
+      <!-- 5. Be Here Now by Ram Dass -->
+      <div class="book">
+        <a href="https://www.amazon.com/Be-Here-Now-Ram-Dass/dp/0517543052" target="_blank">
+          <img src="https://iasbaba.com/wp-content/uploads/2019/02/be-here-now.jpg" alt="Be Here Now"
+            height="100" width="100" />
+          <h4>Be Here Now</h4>
+        </a>
+        <p>By Ram Dass</p>
+        <p>An inspirational guide bridging Eastern spirituality and Western consciousness, urging us to live mindfully.
+        </p>
+      </div>
+    </section>
 
-  <ul>
-    <li>🕒 Total Time Running: 188 hours</li>
-    <li>🛣️ Total Distance: 761 KM</li>
-    <li>⛰️ Total Elevation: 12,992 Meters</li>
-    <li>🗓️ Days Active: 143</li>
+
+<!-- PERSONAL BLOG SECTION (AFTER BOOK RECOMMENDATIONS) -->
+
+<!-- PERSONAL BLOG SECTION (AFTER BOOK RECOMMENDATIONS) -->
+<section class="container">
+  <h3>Personal Blog</h3>
+  <hr />
+  <ul class="post-list" style="list-style-type: none; padding-left: 0; margin: 0;">
+
+      <!-- Post 4 -->
+      <li style="margin-bottom: 1rem;">
+        <a class="post-link" href="/blog/music"
+          style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #333;">
+          Why do I listen to music?
+        </a>
+        <br />
+        <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+          <span>[experience]</span> <span>[perspective]</span> <span>[music]</span> • 5 Jun 2024
+        </span>
+      </li>
+
+    <!-- Post 1 -->
+    <li style="margin-bottom: 1rem;">
+      <a class="post-link" href="/blog/veil-of-silence"
+        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #333;">
+        Rape, Silence, and Society’s Shadow
+      </a>
+      <br />
+      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+        <span>[society]</span> <span>[philosophy]</span> <span>[injustice]</span> • 16 Aug 2024
+      </span>
+    </li>
+
+    <!-- Post 2 -->
+    <li style="margin-bottom: 1rem;">
+      <a class="post-link" href="/blog/skii"
+        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #333;">
+        Skiing Adventure at Shymbulak, KZ guide
+      </a>
+      <br />
+      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+        <span>[experience]</span> <span>[adventure]</span> <span>[life]</span> • 19 Jun 2024
+      </span>
+    </li>
+
+    <!-- Post 3 -->
+    <li style="margin-bottom: 0;">
+      <a class="post-link" href="/blog/freedom"
+        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #333;">
+        Why Breaking Free from Expectations Changed My Life?
+      </a>
+      <br />
+      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+        <span>[experience]</span> <span>[perspective]</span> <span>[life]</span> • 19 Jun 2024
+      </span>
+    </li>
   </ul>
+</section>
 
-  <b>Top Activity:</b>
+    <!-- BUCKET LIST --><br>
+    <section class="container">
+      <h3>Bucket List</h3>
+      <hr />
+      <ul>
+        <li><strike>🤿 PADI Scuba diving course</strike></li>
+        <li><strike>🏕️ Camping at Chandrataal Lake, Spiti Valley</strike></li>
+        <li><strike>🛣️ Road trip across Northern Himalayas</strike></li>
+        <li><strike>🪂 Paramotoring around Annapurna Ranges, Nepal</strike></li>
+        <li><strike>🌉 Bungee Jumping</strike></li>
+        <li>🎶 Attend Boris Brejcha Music Event</li>
+        <li>🚴‍♀️ Complete a 150km cycling route on Al Qudra track, UAE</li>
+        <li>🏃‍♂️ Participate in a 50km+ Ultra Hell Race trail running competition</li>
+        <li><strike>🏄‍♂️ Master surfing in Bali</strike></li>
+        <li><strike>⛷️ Learn to ski at Shymbulak Ski Resort, KZ</strike></li>
+        <li><strike>🏔️ Hike in Pahalgam town, Kashmir</strike></li>
+        <li>🧗‍♀️ Become a certified rock climber</li>
+        <li>🤿 Become a certified freediver</li>
+        <li><strike>🗻 Climb Mt. Fuji, Japan</strike></li>
+      </ul>
+    </section>
 
-  <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="9686487955" data-style="standard"></div>
-  <script src="https://strava-embeds.com/embed.js"></script>
+    <!-- SPOTIFY LIST --> <br>
+    <section class="container">
+      <h3>Spotify List</h3>
+      <hr />
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/7inHBIM6HHeI8RNK55lHng?utm_source=generator" width="100%"
+        height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <br /><br />
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/5oW66fVQwE2wzkJOTaRPKI?utm_source=generator" width="100%"
+        height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+      <br /><br />
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/6Q4SkRkk8Rb2Kif17hbRXb?utm_source=generator" width="100%"
+        height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </section>
 
-  <hr>
-</div>
+    <!-- STRAVA SECTION --><br>
+    <section class="container">
+      <h3>2023 Year in Sports: Strava 🏃</h3>
+      <hr />
+      <ul>
+        <li>🕒 Total Time Running: 188 hours</li>
+        <li>🛣️ Total Distance: 761 KM</li>
+        <li>⛰️ Total Elevation: 12,992 M</li>
+        <li>🗓️ Days Active: 143</li>
+      </ul>
+      <strong>Top Activity:</strong>
+      <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="9686487955" data-style="standard">
+      </div>
+      <script src="https://strava-embeds.com/embed.js"></script>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
   <footer class="page-footer font-small blue">
-  
-    <div class="footer-copyright text-center py-3">© 2024 :
-      <a href="info@arbazhussain.com"> info@arbazhussain.com</a>
-    </div>
-  
+    © 2025:
+    <a href="mailto:info@arbazhussain.com"> info@arbazhussain.com</a>
   </footer>
+
+  <!-- Scripts: Popper, Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-KvwN45QVpkCXGt9XyVpmoW/b/aK7/odIKh1LHS7v8ZZn+BnTjde3tbqjj9XQvF8W" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </body>
 
