@@ -26,8 +26,6 @@ Ouch. That stung. But more than the sting, it made me stop and think. Why was I 
 
 It wasn’t my job to carry her through the trek. It was my job to walk beside her, respect her pace, and let her handle things in her own way. That realization? It changed everything.
 
-
-
 ### Fairy Tales Are Overrated: Shared Goals Matter
 
 You know how growing up, we’re all sold this idea of finding `“the one”?` That perfect person who will magically complete us and make life feel like a never-ending romantic montage? Yeah, rookie, that’s a load of crap.
@@ -38,6 +36,8 @@ As we continued the hike, I started thinking: what if we approached relationship
 
 We grow up thinking relationships are built on `emotions,love, affection, care.` And sure, that stuff is important, but emotions are like weather,they change all the time. One day, you’re head over heels; the next, you’re irritated because they left the toothpaste cap off. What keeps things steady isn’t just love,it’s shared purpose and respect. That’s what makes a relationship more like a solid team.
 
+
+![love](https://cdn.shopify.com/s/files/1/2246/5913/files/we-are-a-team-quotes-6_600x600.jpg?v=1689939933)
 
 #### Boundaries Make the Team Work: Respect Builds Trust
 
@@ -110,6 +110,8 @@ On the way down, I thought about all the times I’d chased relationships in the
 So, rookie, next time you find yourself thinking about relationships, forget the fairy tale. Look for someone who’s ready to trek through life’s mountains with you. Someone who shares your goals, respects your space, and knows when to walk beside you in silence.
 
 Because love might light the fire, but it’s teamwork that keeps it burning.
+
+![love](https://cdn.shopify.com/s/files/1/2246/5913/files/we-are-a-team-quotes-6_600x600.jpg?v=1689939933)
 
 ### References
 
