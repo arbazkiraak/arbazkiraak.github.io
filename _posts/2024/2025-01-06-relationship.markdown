@@ -111,8 +111,6 @@ So, rookie, next time you find yourself thinking about relationships, forget the
 
 Because love might light the fire, but it’s teamwork that keeps it burning.
 
-![love](https://cdn.shopify.com/s/files/1/2246/5913/files/we-are-a-team-quotes-6_600x600.jpg?v=1689939933)
-
 ### References
 
 1. [Mark Manson - Relationships](https://markmanson.net/relationships)  
