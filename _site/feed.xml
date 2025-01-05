@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Jan 2025 18:34:54 +0000</pubDate>
-    <lastBuildDate>Sun, 05 Jan 2025 18:34:54 +0000</lastBuildDate>
+    <pubDate>Sun, 05 Jan 2025 18:49:45 +0000</pubDate>
+    <lastBuildDate>Sun, 05 Jan 2025 18:49:45 +0000</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
@@ -31,15 +31,15 @@
 
 &lt;h3 id=&quot;fairy-tales-are-overrated-shared-goals-matter&quot;&gt;Fairy Tales Are Overrated: Shared Goals Matter&lt;/h3&gt;
 
-&lt;p&gt;You know how growing up, we’re all sold this idea of finding “the one”? That perfect person who will magically complete us and make life feel like a never-ending romantic montage? Yeah, rookie, that’s a load of crap.&lt;/p&gt;
+&lt;p&gt;You know how growing up, we’re all sold this idea of finding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;“the one”?&lt;/code&gt; That perfect person who will magically complete us and make life feel like a never-ending romantic montage? Yeah, rookie, that’s a load of crap.&lt;/p&gt;
 
 &lt;p&gt;No one completes you. You complete yourself. Real relationships aren’t about finding someone to fill the gaps in your life; they’re about finding someone who complements your journey. Someone who’s already whole, just like you, and who’s willing to team up with you to make life a little better.&lt;/p&gt;
 
 &lt;p&gt;As we continued the hike, I started thinking: what if we approached relationships the way we approach a great team project? Shared goals. Mutual effort. Respect for each other’s strengths and weaknesses. No one trying to outshine the other, no one trying to be the hero. Just two people, moving forward together.&lt;/p&gt;
 
-&lt;p&gt;We grow up thinking relationships are built on emotions,love, affection, care. And sure, that stuff is important, but emotions are like weather,they change all the time. One day, you’re head over heels; the next, you’re irritated because they left the toothpaste cap off. What keeps things steady isn’t just love,it’s shared purpose and respect. That’s what makes a relationship more like a solid team.&lt;/p&gt;
+&lt;p&gt;We grow up thinking relationships are built on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;emotions,love, affection, care.&lt;/code&gt; And sure, that stuff is important, but emotions are like weather,they change all the time. One day, you’re head over heels; the next, you’re irritated because they left the toothpaste cap off. What keeps things steady isn’t just love,it’s shared purpose and respect. That’s what makes a relationship more like a solid team.&lt;/p&gt;
 
-&lt;h3 id=&quot;boundaries-make-the-team-work-respect-builds-trust&quot;&gt;Boundaries Make the Team Work: Respect Builds Trust&lt;/h3&gt;
+&lt;h4 id=&quot;boundaries-make-the-team-work-respect-builds-trust&quot;&gt;Boundaries Make the Team Work: Respect Builds Trust&lt;/h4&gt;
 
 &lt;p&gt;Later that night, after setting up camp, Chutki and I ended up on cooking duty. It wasn’t anything fancy,just instant noodles and soup,but something about the way we worked together felt different. We didn’t need to talk much. There was no need for grand gestures or over-the-top concern,just quiet, steady collaboration.&lt;/p&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;p&gt;Real intimacy isn’t dependent on physical or emotional closeness. It’s about knowing you can share your deepest fears, your weirdest thoughts, and your dumbest jokes without judgment. It’s when someone gets the real you,the messy, unfiltered version,and still wants to stick around.&lt;/p&gt;
 
-&lt;h3 id=&quot;conflict-the-ultimate-test-of-teamwork&quot;&gt;Conflict: The Ultimate Test of Teamwork&lt;/h3&gt;
+&lt;h4 id=&quot;conflict-the-ultimate-test-of-teamwork&quot;&gt;Conflict: The Ultimate Test of Teamwork&lt;/h4&gt;
 
 &lt;p&gt;By the next morning, Chutki’s ankle was better, and we continued our trek. The trail got steeper, the air thinner, and tempers shorter. At one point, I got a little snappy about the pace. Chutki fired back, and for a moment, it felt like things might spiral into a full-blown argument.&lt;/p&gt;
 
@@ -89,7 +89,7 @@
 
 &lt;p&gt;Leadership isn’t about dominating the relationship,it’s about creating an environment where both people feel empowered to be themselves, make decisions, and grow together. On that trek, I learned that sometimes being a good leader means stepping back and letting someone else take charge.&lt;/p&gt;
 
-&lt;h3 id=&quot;the-end-of-the-trek-the-start-of-a-new-perspective&quot;&gt;The End of the Trek, The Start of a New Perspective&lt;/h3&gt;
+&lt;h4 id=&quot;the-end-of-the-trek-the-start-of-a-new-perspective&quot;&gt;The End of the Trek, The Start of a New Perspective&lt;/h4&gt;
 
 &lt;p&gt;By the time we reached the summit, Chutki and I were too tired to talk much. But as we stood there, looking out at the endless horizon, I felt something shift inside me. This wasn’t about romance. It wasn’t about needing someone to make me happy. It was about finding a teammate,someone who could walk with me through life’s toughest climbs.&lt;/p&gt;
 
@@ -152,7 +152,18 @@
     
       <item>
         <title>Islamic Finance Meets Blockchain</title>
-        <description>&lt;p&gt;Blockchain finance can feel like an overwhelming beast—an endless maze of protocols, DeFi platforms, and speculative tokens. It’s easy to get lost in the jargon of staking rewards, liquidity pools, and yield farming. But hidden in this chaos lies a golden opportunity: the fusion of &lt;strong&gt;ancient Islamic finance principles&lt;/strong&gt; with &lt;strong&gt;modern decentralized blockchain technology&lt;/strong&gt;. This isn’t just another tech trend—it’s a bold new frontier for ethical, transparent, and inclusive finance.&lt;/p&gt;
+        <description>&lt;p&gt;I wanna share why Blockchain Decentralised Finance(DeFi) clicks perfectly when combined with Islamic finance, such as :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open-source smart contracts on blockchain ensure transparent and tamper-proof financial agreements.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Protocols offering profit-sharing models instead of interest-based lending, such as liquidity pools where profits are distributed based on participation without earning interest.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Blockchain finance can feel like an overwhelming beast,an endless maze of protocols, DeFi platforms, and speculative tokens. It’s easy to get lost in the jargon of staking rewards, liquidity pools, and yield farming. But hidden in this chaos lies a golden opportunity: the fusion of &lt;strong&gt;ancient Islamic finance principles&lt;/strong&gt; with &lt;strong&gt;modern decentralized blockchain technology&lt;/strong&gt;. This isn’t just another tech trend,it’s a bold new frontier for ethical, transparent, and inclusive finance.&lt;/p&gt;
 
 &lt;p&gt;Imagine riding a camel through a vast desert and finding an oasis where the wisdom of the past meets the technology of the future. That’s what this new world of &lt;strong&gt;Islamic-compliant decentralized finance (DeFi)&lt;/strong&gt; feels like. And at its heart is a set of time-tested principles designed to promote fairness, shared risk, and social good.&lt;/p&gt;
 
@@ -162,13 +173,13 @@
 
 &lt;p&gt;Islamic finance, governed by Sharia law, emphasizes five key principles:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;🌍 &lt;strong&gt;Life&lt;/strong&gt; must be respected—so no funding unethical or harmful ventures.&lt;/li&gt;
-  &lt;li&gt;🧬 &lt;strong&gt;Reason&lt;/strong&gt; must be protected—investments in industries that harm judgment, like alcohol or gambling, are prohibited.&lt;/li&gt;
-  &lt;li&gt;🤝 &lt;strong&gt;Family&lt;/strong&gt; stability is paramount—practices that exploit individuals or families, like predatory lending, are forbidden.&lt;/li&gt;
-  &lt;li&gt;💰 &lt;strong&gt;Wealth&lt;/strong&gt; should serve society—finance should be transparent, ethical, and benefit the broader community.&lt;/li&gt;
+  &lt;li&gt;🌍 &lt;strong&gt;Life&lt;/strong&gt; must be respected,so no funding unethical or harmful ventures.&lt;/li&gt;
+  &lt;li&gt;🧬 &lt;strong&gt;Reason&lt;/strong&gt; must be protected,investments in industries that harm judgment, like alcohol or gambling, are prohibited.&lt;/li&gt;
+  &lt;li&gt;🤝 &lt;strong&gt;Family&lt;/strong&gt; stability is paramount,practices that exploit individuals or families, like predatory lending, are forbidden.&lt;/li&gt;
+  &lt;li&gt;💰 &lt;strong&gt;Wealth&lt;/strong&gt; should serve society,finance should be transparent, ethical, and benefit the broader community.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These principles aren’t arbitrary rules—they’re the foundation of a fair and equitable financial system. And this is where blockchain, with its inherent transparency and decentralization, can be a game changer.&lt;/p&gt;
+&lt;p&gt;These principles aren’t arbitrary rules,they’re the foundation of a fair and equitable financial system. And this is where blockchain, with its inherent transparency and decentralization, can be a game changer.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;“Finance should serve the people, not enslave them.”&lt;/strong&gt;&lt;/p&gt;
@@ -185,11 +196,11 @@ Charging interest on loans is prohibited because it shifts all the risk to the b
 
     &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: Imagine a borrower needs $500 for a washing machine. In conventional banking, they would take a loan and owe $600 due to interest.&lt;/p&gt;
 
-    &lt;p&gt;In Islamic banking, the bank purchases the washing machine for $500, takes ownership, and then sells it to the borrower for $600, payable in installments. The bank profits from the sale, not interest, and shares real risk by owning the asset.&lt;/p&gt;
+    &lt;p&gt;In Islamic banking, the bank purchases the washing machine for $500, takes ownership, and then sells it to the borrower for $600, payable in installments. &lt;strong&gt;The bank profits from the sale, not interest, and shares real risk by owning the asset.&lt;/strong&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;🎲 &lt;strong&gt;Maysir (Gambling/Speculation)&lt;/strong&gt;: 
-Pure speculation, like betting on the price of a token with no real utility, is forbidden. Tokens that have clear use cases and underlying value—like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bitcoin&lt;/code&gt; as a store of value or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ethereum&lt;/code&gt; for smart contracts—are more likely to comply with Sharia guidelines.&lt;/p&gt;
+Pure speculation, like betting on the price of a token with no real utility, is forbidden. Tokens that have clear use cases and underlying value,like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bitcoin&lt;/code&gt; as a store of value or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ethereum&lt;/code&gt; for smart contracts,are more likely to comply with Sharia guidelines.&lt;/p&gt;
 
     &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: Trading highly speculative memecoins with no intrinsic value is considered haram because it resembles gambling.&lt;/p&gt;
 
@@ -199,7 +210,7 @@ Pure speculation, like betting on the price of a token with no real utility, is 
     &lt;p&gt;🕵️‍♂️ &lt;strong&gt;Gharar (Excessive Uncertainty)&lt;/strong&gt;: 
 Transactions should be transparent and free from ambiguity. Blockchain’s open-source nature and smart contracts can greatly reduce gharar by ensuring all terms are visible and immutable.&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: In shady contracts with hidden clauses, gharar is high because one party is unaware of crucial terms. In contrast, a smart contract on Ethereum where all conditions are publicly verifiable minimizes gharar.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: In shady contracts with hidden clauses, gharar is high because one party is unaware of crucial terms. In contrast, a smart contract on Ethereum where all conditions are&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; publicly verifiable minimizes gharar.&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -256,13 +267,13 @@ Transactions should be transparent and free from ambiguity. Blockchain’s open-
 
 &lt;h3 id=&quot;the-road-ahead-merging-tradition-with-innovation&quot;&gt;The Road Ahead: Merging Tradition with Innovation&lt;/h3&gt;
 
-&lt;p&gt;As blockchain technology evolves, so does its potential to revolutionize Islamic finance. By combining the ethical foundations of Sharia law with the transparency and inclusiveness of decentralized finance, we can build a financial system that serves everyone—not just the privileged few.&lt;/p&gt;
+&lt;p&gt;As blockchain technology evolves, so does its potential to revolutionize Islamic finance. By combining the ethical foundations of Sharia law with the transparency and inclusiveness of decentralized finance, we can build a financial system that serves everyone,not just the privileged few.&lt;/p&gt;
 
 &lt;p&gt;Imagine a world where farmers can access funding without falling into debt traps, where developers can partner with banks instead of borrowing at high interest, and where investors can profit ethically by backing real projects. This is the promise of Islamic finance meeting blockchain.&lt;/p&gt;
 
 &lt;p&gt;You don’t need to be a tech wizard or a financial guru to join this movement. Whether you’re a curious explorer or a seasoned investor, there’s a place for you in this new landscape.&lt;/p&gt;
 
-&lt;p&gt;So saddle up, rookie. The desert of traditional finance is vast and dry, but there’s an oasis ahead—one where &lt;strong&gt;Islamic principles and blockchain innovation come together&lt;/strong&gt; to create a future of fair profits, shared risk, and real value.&lt;/p&gt;
+&lt;p&gt;So saddle up, rookie. The desert of traditional finance is vast and dry, but there’s an oasis ahead,one where &lt;strong&gt;Islamic principles and blockchain innovation come together&lt;/strong&gt; to create a future of fair profits, shared risk, and real value.&lt;/p&gt;
 
 &lt;hr /&gt;
 

@@ -30,17 +30,16 @@ It wasn’t my job to carry her through the trek. It was my job to walk beside h
 
 ### Fairy Tales Are Overrated: Shared Goals Matter
 
-You know how growing up, we’re all sold this idea of finding “the one”? That perfect person who will magically complete us and make life feel like a never-ending romantic montage? Yeah, rookie, that’s a load of crap.
+You know how growing up, we’re all sold this idea of finding `“the one”?` That perfect person who will magically complete us and make life feel like a never-ending romantic montage? Yeah, rookie, that’s a load of crap.
 
 No one completes you. You complete yourself. Real relationships aren’t about finding someone to fill the gaps in your life; they’re about finding someone who complements your journey. Someone who’s already whole, just like you, and who’s willing to team up with you to make life a little better.
 
 As we continued the hike, I started thinking: what if we approached relationships the way we approach a great team project? Shared goals. Mutual effort. Respect for each other’s strengths and weaknesses. No one trying to outshine the other, no one trying to be the hero. Just two people, moving forward together.
 
-We grow up thinking relationships are built on emotions,love, affection, care. And sure, that stuff is important, but emotions are like weather,they change all the time. One day, you’re head over heels; the next, you’re irritated because they left the toothpaste cap off. What keeps things steady isn’t just love,it’s shared purpose and respect. That’s what makes a relationship more like a solid team.
+We grow up thinking relationships are built on `emotions,love, affection, care.` And sure, that stuff is important, but emotions are like weather,they change all the time. One day, you’re head over heels; the next, you’re irritated because they left the toothpaste cap off. What keeps things steady isn’t just love,it’s shared purpose and respect. That’s what makes a relationship more like a solid team.
 
 
-
-### Boundaries Make the Team Work: Respect Builds Trust
+#### Boundaries Make the Team Work: Respect Builds Trust
 
 Later that night, after setting up camp, Chutki and I ended up on cooking duty. It wasn’t anything fancy,just instant noodles and soup,but something about the way we worked together felt different. We didn’t need to talk much. There was no need for grand gestures or over-the-top concern,just quiet, steady collaboration.
 
@@ -62,7 +61,7 @@ Real intimacy isn’t dependent on physical or emotional closeness. It’s about
 
 
 
-### Conflict: The Ultimate Test of Teamwork
+#### Conflict: The Ultimate Test of Teamwork
 
 By the next morning, Chutki’s ankle was better, and we continued our trek. The trail got steeper, the air thinner, and tempers shorter. At one point, I got a little snappy about the pace. Chutki fired back, and for a moment, it felt like things might spiral into a full-blown argument.
 
@@ -98,7 +97,7 @@ Leadership isn’t about dominating the relationship,it’s about creating an en
 
 
 
-### The End of the Trek, The Start of a New Perspective
+#### The End of the Trek, The Start of a New Perspective
 
 By the time we reached the summit, Chutki and I were too tired to talk much. But as we stood there, looking out at the endless horizon, I felt something shift inside me. This wasn’t about romance. It wasn’t about needing someone to make me happy. It was about finding a teammate,someone who could walk with me through life’s toughest climbs.
 
