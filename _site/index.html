@@ -676,6 +676,36 @@
       -webkit-text-fill-color: transparent;
       font-weight: 600;
     }
+
+    /* Strava Section Styling */
+    .strava-section {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .strava-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .strava-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .strava-embed-placeholder {
+      border-radius: 12px;
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -1322,8 +1352,10 @@
         <li>⛰️ Total Elevation: 12,992 M</li>
         <li>🗓️ Days Active: 143</li>
       </ul> <br>
-      <strong>Top Activity:</strong>
-      <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="9686487955" data-style="standard">
+      <div class="strava-section">
+        <h4 class="strava-title">Top Activity</h4>
+        <div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="9686487955" data-style="standard">
+        </div>
       </div>
       <script src="https://strava-embeds.com/embed.js"></script>
     </section>
