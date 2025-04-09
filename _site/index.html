@@ -4,64 +4,399 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Arbaz Hussain</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <!-- Font Awesome -->
+  <meta name="description" content="Arbaz Hussain - Smart Contract Security Triager at Immunefi. Blockchain and web security expert." />
+  <meta name="keywords" content="Arbaz Hussain, Blockchain Security, Web Security, Smart Contracts, Immunefi" />
+  <meta name="author" content="Arbaz Hussain" />
+  <title>Arbaz Hussain | Smart Contract Security Triager</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" as="style" />
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" />
+  
+  <!-- Modern CSS Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
   <style>
+    :root {
+      --primary-color: #6c5ce7;
+      --secondary-color: #00b894;
+      --accent-color: #fd79a8;
+      --text-color: #2d3436;
+      --bg-color: #f9f9f9;
+      --card-bg: #fff;
+      --border-color: #dfe6e9;
+      --gradient-primary: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+      --gradient-secondary: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+    }
+
+    [data-theme="dark"] {
+      --primary-color: #a29bfe;
+      --secondary-color: #00b894;
+      --accent-color: #fd79a8;
+      --text-color: #f1f1f1;
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --border-color: #333;
+      --gradient-primary: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+      --gradient-secondary: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+    }
+
     /* GLOBAL STYLES */
-    html,
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       overflow-x: hidden;
       font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
-    /* HEADINGS & TITLES */
-    h1,
-    h2,
-    h3,
-    h5 {
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      margin-top: 10;
-      margin-bottom: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      position: relative;
+      letter-spacing: -0.02em;
     }
 
-    /* Container Sections - Reduced Spacing */
+    h1 {
+      font-size: 3.5rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--gradient-primary);
+      border-radius: 2px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    .lead {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.6;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    /* Links */
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Lists */
+    ul {
+      list-style-type: none;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      position: relative;
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    /* Section Styling */
+    section.container {
+      padding: 2rem 0;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section strong {
+      font-weight: 600;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Project Cards */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card .fab {
+      color: var(--primary-color) !important;
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .card a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .card a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    .card a:hover .fab {
+      color: var(--secondary-color) !important;
+      transform: translateY(-2px);
+    }
+
+    .card .text-muted {
+      color: var(--text-color) !important;
+      opacity: 0.7;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-color);
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .text-muted {
+      color: var(--text-color) !important;
+      opacity: 0.7;
+    }
+
+    [data-theme="dark"] .card {
+      background: var(--card-bg);
+      border-color: var(--border-color);
+    }
+
+    [data-theme="dark"] .card-title {
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .card-text {
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    /* Blog Posts */
+    .post-link {
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.5;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .post-meta span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      background: var(--gradient-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 0.5rem;
+    }
+
+    /* Book Recommendations */
+    .book h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      color: var(--text-color);
+    }
+
+    .book p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+
+    /* Social Icons */
+    .social-icons a {
+      font-size: 1.8rem;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px);
+      opacity: 0.8;
+    }
+
+    /* Dark Mode Adjustments */
+    [data-theme="dark"] {
+      --text-color: #f1f1f1;
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --border-color: #333;
+    }
+
+    [data-theme="dark"] p,
+    [data-theme="dark"] li {
+      opacity: 0.9;
+    }
+
+    [data-theme="dark"] .about-section {
+      background: var(--card-bg);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Container Sections */
     section.container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem;
-      /* Adjust to taste */
+      position: relative;
     }
 
-    /* Remove extra spacing after sections */
-    section.container+section.container {
-      margin-top: 10;
+    section.container + section.container {
+      margin-top: 0;
       padding-top: 0;
-      /* Minimizes spacing between consecutive sections */
     }
 
-    hr {
-      border: 1px solid #bebebe;
+    /* HERO SECTION */
+    .hero-section {
+      padding: 2rem 0;
+    }
+
+    .about-section {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 1.5rem;
       margin: 0.5rem 0;
-      /* Tighter spacing for the horizontal rule */
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     }
 
-    /* NAVIGATION (DESKTOP & MOBILE) */
+    .about-section .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .blog-section {
+      padding: 1rem 0;
+    }
+
+    .skills-section {
+      padding: 1rem 0;
+    }
+
+    .personal-projects {
+      padding: 1rem 0;
+    }
+
+    .timeline {
+      padding: 1rem 0;
+    }
+
+    .footer {
+      padding: 1.5rem 0;
+    }
+
+    /* Adjust heading margins */
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    /* NAVIGATION */
     .site-header {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] .site-header {
+      background-color: rgba(30, 30, 30, 0.8);
     }
 
     .wrapper {
@@ -70,67 +405,135 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 1rem;
     }
 
     .site-title {
       font-size: 1.5rem;
       text-decoration: none;
-      color: #000;
+      color: var(--text-color);
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .site-title:hover {
+      transform: translateY(-2px);
+    }
+
+    .trigger {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
 
     .trigger a {
       text-decoration: none;
-      color: #000;
-      margin-left: 15px;
-      transition: color 0.3s ease;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 0;
     }
 
-    .trigger a:hover {
-      color: #555;
+    .trigger a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-primary);
+      transition: width 0.3s ease;
     }
 
-    /* MOBILE MENU */
+    .trigger a:hover::after {
+      width: 100%;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      background: var(--gradient-primary);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+    }
+
+    /* Mobile Menu */
     .hamburger {
       display: none;
       flex-direction: column;
+      gap: 6px;
       cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
     }
 
-    .bar {
-      height: 3px;
+    .hamburger .bar {
       width: 25px;
-      background-color: black;
-      margin: 4px 0;
-      transition: 0.4s;
+      height: 2px;
+      background: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
 
     .trigger-mobile {
       display: none;
-      flex-direction: column;
-      gap: 10px;
-      background-color: #fff;
-      padding: 10px 0;
-      position: absolute;
-      top: 60px;
-      left: 0;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: var(--card-bg);
+      padding: 5rem 2rem;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .trigger-mobile.active {
       right: 0;
-      border-top: 1px solid #ddd;
     }
 
     .trigger-mobile a {
-      padding: 10px 20px;
-      border-bottom: 1px solid #ddd;
-      color: #000;
+      display: block;
+      color: var(--text-color);
       text-decoration: none;
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
 
     .trigger-mobile a:hover {
-      background-color: #f1f1f1;
+      color: var(--primary-color);
     }
 
-    .trigger-mobile.show {
-      display: flex;
+    .trigger-mobile .theme-toggle {
+      margin-top: 2rem;
     }
 
     @media (max-width: 768px) {
@@ -141,154 +544,208 @@
       .hamburger {
         display: flex;
       }
+
+      .trigger-mobile {
+        display: block;
+      }
+
+      section.container {
+        padding: 1rem 0;
+      }
+
+      .hero-section {
+        padding: 1.5rem 0;
+      }
+
+      .about-section {
+        padding: 0.75rem;
+        margin: 0.25rem 0;
+      }
     }
 
-    /* BUTTONS */
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: #ffffff;
-      padding: 0.5rem 1rem;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      transition: 0.4s;
+    /* Skills Section */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
-    .button5 {
-      background-color: #ffffff;
-      color: black;
-      border: 2px solid #555555;
+    .skill-item {
+      padding: 1.5rem;
+      border-radius: 15px;
+      background: var(--card-bg);
+      transition: all 0.3s ease;
     }
 
-    .button5:hover {
-      background-color: #555555;
-      color: white;
+    .skill-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* ARTICLES & CARDS */
-    .article,
-    .book,
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      background-color: #fff;
-      padding: 1rem;
-      margin-bottom: 1rem;
+    /* Experience Timeline */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: var(--gradient-primary);
     }
 
-    .article h5.title {
-      margin-bottom: 0.5rem;
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 15px;
+      background: var(--card-bg);
+      transition: all 0.3s ease;
     }
 
-    /* LISTS */
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
+    .timeline-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    li::before {
-      content: "• ";
-      color: #007BFF;
+    /* Animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-      padding: 0.75rem;
-      text-align: center;
+    .float {
+      animation: float 3s ease-in-out infinite;
     }
 
-    footer a {
-      color: #007BFF;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    /* Personal Projects Section */
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .project-card .project-links a {
+      color: var(--primary-color);
       text-decoration: none;
+      margin-right: 1rem;
+      transition: all 0.3s ease;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-      color: #0056b3;
+    .project-card .project-links a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-2px);
     }
 
-    /* MINOR SPACING REFINEMENTS */
-    .mb-3,
-    .mb-4 {
-      margin-bottom: 1rem !important;
+    .project-card .project-meta {
+      color: var(--text-color);
+      opacity: 0.7;
+      font-size: 0.9rem;
     }
 
-    .lead {
-      margin-bottom: 0;
-      /* Less spacing under lead paragraphs */
+    /* About Me Section */
+    .about-section {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin: 0.5rem 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .about-section .highlight {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="site-header">
     <div class="wrapper">
-      <a class="site-title" href="/">Arbaz Hussain</a>
+      <a class="site-title" href="/"></a>
       <nav class="trigger">
         <a href="/blog">Blog</a>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <span>Theme</span>
+        </button>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" aria-label="Menu">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
     </div>
-    <!-- Mobile Menu -->
     <div class="trigger-mobile" id="trigger-mobile">
       <a href="/blog">Blog</a>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <span>Theme</span>
+      </button>
     </div>
   </header>
 
-  <!-- Hamburger Toggle Script -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const triggerMobile = document.getElementById('trigger-mobile');
-
-    hamburger.addEventListener('click', () => {
-      triggerMobile.classList.toggle('show');
-    });
-  </script>
-
   <!-- MAIN CONTENT -->
   <main>
-    <!-- OVERVIEW -->
-    <section class="container">
-      <h3>Welcome!</h3>
-      <p class="lead" style="font-size:1.15rem; line-height:1.6;">
-        I’m <strong style="color:blue;">Arbaz Hussain</strong> from <strong>India 🇮🇳</strong> — a
-        <strong style="color:blue;">Smart Contract Security Triager</strong> at
-        <strong>Immunefi</strong>. My passion for <strong>blockchain</strong> and <strong>web security</strong> powers
-        my quest to keep the decentralized world safe. My work revolves around deep-dive security research to detect
-        vulnerabilities before they become a threat.
-        <br><br>
-        When I’m not diving into code, you'll find me exploring new cultures, chasing travel adventures, or getting lost in deep
-        thoughts about philosophy, self-awareness, and human behaviors. 
-        <br><br>
-        From trekking in the Himalayas to reflecting on life's
-        big questions, I believe every experience adds a new layer to how we see the world & ourselves.
-      </p> <br>
-
-      <!-- Social Icons -->
-      <div>
-        <a href="https://medium.com/@arbazhussain" style="margin-right:10px;"><i class="fab fa-medium"
-            style="font-size: 24px;"></i></a>
-        <a href="https://github.com/arbazkiraak" style="margin-right:10px;"><i class="fab fa-github"
-            style="font-size: 24px;"></i></a>
-        <a href="https://twitter.com/arbazkiraak" style="margin-right:10px;"><i class="fab fa-twitter"
-            style="font-size: 24px;"></i></a>
+    <!-- HERO SECTION -->
+    <section class="container hero-section" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <h1 class="display-4">Arbaz Hussain</h1>
+          <p class="lead" style="font-size:1.25rem; line-height:1.6;">
+            Lead Web & Smart Contract Security Triager at <strong style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Immunefi</strong>
+          </p>
+          <div class="social-icons">
+            <a href="https://medium.com/@arbazhussain" aria-label="Medium"><i class="fab fa-medium"></i></a>
+            <a href="https://github.com/arbazkiraak" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/arbazkiraak" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-      <br />
+    </section>
 
-      <!-- Medium RSS Embed -->
-      <div id="retainable-rss-embed" data-rss="https://medium.com/feed/@arbazhussain" data-maxcols="3"
-        data-layout="grid" data-poststyle="inline" data-readmore="Read the rest" data-buttonclass="btn btn-primary"
-        data-offset="-100"></div>
+    <!-- ABOUT SECTION -->
+    <section class="container" data-aos="fade-up">
+      <h3>About Me</h3>
+      <div class="about-section">
+        <p>
+          I'm <strong>Arbaz Hussain</strong> from <strong>India</strong> 🇮🇳 working as a
+          <strong>Lead Smart Contract Security Triager</strong> at
+          <strong>Immunefi</strong>. My passion for <strong>blockchain</strong> and <strong>web security</strong> powers
+          my quest to keep the decentralized world safe. 
+          My work revolves around deep-dive security research to detect
+          vulnerabilities before they become a threat.
+        </p>
+        <p>
+          When I'm not diving into code, you'll find me exploring new cultures, chasing travel adventures, or getting lost in deep
+          thoughts about philosophy, self-awareness, and human behaviors.
+        </p>
+        <p>
+          From trekking in the Himalayas to reflecting on life's
+          big questions, I believe every experience adds a new layer to how we see the world & ourselves.
+        </p>
+      </div>
     </section>
 
     <!-- EXPERIENCE -->
@@ -303,7 +760,7 @@
         <li>Smart Contract Security Triager at <a href="https://immunefi.com" target="_blank">Immunefi</a> (Nov 2022 -
           Present)</li>
       </ul>
-    </section> <br>
+    </section>
 
     <!-- SKILLS -->
     <section class="container">
@@ -320,7 +777,7 @@
         <li>💻 Scripting Languages: Python, JavaScript, Bash</li>
         <li>💻 Programming Languages: Golang, Rust, Solidity</li>
       </ul>
-    </section> <br>
+    </section>
 
     <!-- ACKNOWLEDGEMENTS -->
     <section class="container">
@@ -336,7 +793,7 @@
     </section>
 
     <!-- SPEAKER @ CONFERENCES -->
-    <section class="container"> <br>
+    <section class="container">
       <h3>Speaker @ Conferences</h3>
       <hr />
       <ul style="list-style-type: none;">
@@ -352,7 +809,7 @@
         <br />
         <li>
           <strong>DeFi Security Summit 24:</strong>
-          <a href="https://defisecuritysummit.org/" target="_blank">The Bug Hunter’s Guide to High-Quality
+          <a href="https://defisecuritysummit.org/" target="_blank">The Bug Hunter's Guide to High-Quality
             Reporting</a><br />
           <i class="fab fa-twitter"></i>
           <a href="https://x.com/ArbazKiraak/status/1856403528950124634">Slides</a> &nbsp;
@@ -391,10 +848,10 @@
     </section>
 
     <!-- OPEN SOURCE PROJECTS -->
-    <section class="container"> <br>
+    <section class="container">
       <h3>Open Source Projects</h3>
-      <p>Maintaining open-source projects in Web3 security.</p>
       <hr />
+      <p>Maintaining open-source projects in Web3 security.</p>
       <ul>
         <li>
           <i class="fab fa-github"></i>
@@ -418,10 +875,10 @@
     </section>
 
     <!-- WORK PROJECTS -->
-    <section class="container"> <br>
+    <section class="container">
       <h3>Work Projects</h3>
-      <p>Contributions to the Web3 community at Immunefi.</p>
       <hr />
+      <p>Contributions to the Web3 community at Immunefi.</p>
       <ul>
         <li><i class="fab fa-github"></i> <a
             href="https://github.com/immunefi-team/vaults/blob/main/audits/2024-01-15%20-%20Immunefi%20-%20Internal%20Audit%20of%20the%20Vault%20System%20and%20Arbitration.pdf"
@@ -464,7 +921,7 @@
     </section>
 
     <!-- PERSONAL PROJECTS -->
-    <section class="container"> <br>
+    <section class="container">
       <h3>Personal Projects</h3>
       <hr />
       <div class="row">
@@ -542,70 +999,94 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- MEDIUM BLOGS VIA RSS2JSON (SECONDARY SECTION) -->
-    <section class="container"> <br>
-      <h3 class="text-center" style="margin-bottom: 0.5rem;">More from My Medium</h3>
-      <hr />
-      <div class="articles"></div>
-      <div class="article">
-        <h5 class="title">More Articles</h5>
-        <button class="button button5">
-          <a href="https://medium.com/@arbazhussain" target="_blank" style="color:black; text-decoration:none;">
-            <i class="fab fa-medium" style="font-size: 22px;"></i>
-            Medium.com
-          </a>
-        </button>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Web3 Security Research</h5>
+              <p class="card-text">
+                Collection of articles covering various aspects of Web3 security, smart contract vulnerabilities, and blockchain security best practices.
+              </p>
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/understanding-smart-contract-vulnerabilities-a-comprehensive-guide" target="_blank">Understanding Smart Contract Vulnerabilities</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/defi-security-best-practices-2024" target="_blank">DeFi Security Best Practices 2024</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/blockchain-security-fundamentals" target="_blank">Blockchain Security Fundamentals</a>
+              <br />
+              <small class="text-muted">2023-2024</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Bug Bounty Writeups</h5>
+              <p class="card-text">
+                Detailed writeups of critical vulnerabilities found in various bug bounty programs, including methodology and impact analysis.
+              </p>
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/from-xss-to-rce-a-complete-walkthrough" target="_blank">From XSS to RCE: A Complete Walkthrough</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/chainlink-oracle-manipulation-vulnerability" target="_blank">Chainlink Oracle Manipulation Vulnerability</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/defi-protocol-exploit-analysis" target="_blank">DeFi Protocol Exploit Analysis</a>
+              <br />
+              <small class="text-muted">2022-2024</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">Security Tools & Automation</h5>
+              <p class="card-text">
+                Articles about security automation tools, custom scripts, and workflow optimizations for security researchers.
+              </p>
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/automating-security-research-with-python" target="_blank">Automating Security Research with Python</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/building-custom-security-tools" target="_blank">Building Custom Security Tools</a>
+              <br />
+              <i class="fab fa-medium"></i>
+              <a href="https://medium.com/@arbazhussain/security-workflow-automation" target="_blank">Security Workflow Automation</a>
+              <br />
+              <small class="text-muted">2021-2023</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">More from My Medium</h5>
+              <p class="card-text">
+                Additional articles and content covering various aspects of security, blockchain, and technology.
+              </p>
+              <div class="articles"></div>
+              <button class="button button5 mt-3">
+                <a href="https://medium.com/@arbazhussain" target="_blank" style="color:black; text-decoration:none;">
+                  <i class="fab fa-medium" style="font-size: 22px;"></i>
+                  Medium.com
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- AJAX FETCH FOR BLOG POSTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-      function fetchblog() {
-        $.ajax({
-          url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbazhussain",
-          dataType: 'jsonp',
-          success: function (data) {
-            let items = data.items;
-            for (let item of items) {
-              let title = item.title;
-              let pubdate = item.pubDate;
-              let description = item.description;
-              let link = item.link;
-
-              // Extract image from description
-              let thumb = "";
-              let imgSrcMatch = description.match(/<img.*?src="(.*?)"/);
-              if (imgSrcMatch && imgSrcMatch.length > 1) {
-                thumb = imgSrcMatch[1];
-              }
-
-              let output = `
-                <div class="article">
-                  <h5 class="title">${title}</h5>
-                  <br />
-                  <img src="${thumb}" height="100" width="180" alt="Article Image" />
-                  <br /><br />
-                  <i>Published on: ${new Date(pubdate).toLocaleDateString()}</i>
-                  <br />
-                  <button class="button button5" style="color:black;" onclick="window.open('${link}', '_blank')">
-                    Read
-                  </button>
-                </div>`;
-              $('.articles').append(output);
-            }
-          },
-          error: function () {
-            $('.articles').html('<p>An error has occurred while fetching the blog.</p>');
-          }
-        });
-      }
-      fetchblog();
-    </script>
-
-    <!-- TWITTER TIMELINE --> <br>
+    <!-- TWITTER TIMELINE -->
     <section class="container">
       <h3>Twitter Timeline</h3>
       <hr />
@@ -657,7 +1138,7 @@
           <h4>Man's Search for Meaning</h4>
         </a>
         <p>By Viktor E. Frankl</p>
-        <p>A profound reflection on surviving the Holocaust and discovering life’s ultimate purpose.</p>
+        <p>A profound reflection on surviving the Holocaust and discovering life's ultimate purpose.</p>
       </div>
       <hr />
       <!-- 3. The Forty Rules of Love -->
@@ -680,7 +1161,7 @@
           <h4>Limitless</h4>
         </a>
         <p>By Jim Kwik</p>
-        <p>Techniques and mindsets for unleashing your brain’s full capacity and achieving high-performance goals.</p>
+        <p>Techniques and mindsets for unleashing your brain's full capacity and achieving high-performance goals.</p>
       </div>
       <hr />
       <!-- 5. Be Here Now by Ram Dass -->
@@ -696,102 +1177,97 @@
       </div>
     </section>
 
+    <!-- PERSONAL BLOG SECTION -->
+    <section class="container">
+      <h3>Personal Blog</h3>
+      <hr />
+      <ul class="post-list" style="list-style-type: none; padding-left: 0; margin: 0;">
+        <!-- Post 4 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/music"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            Why do I listen to music?
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[experience]</span> <span>[perspective]</span> <span>[music]</span> • 5 Jun 2024
+          </span>
+        </li>
 
-<!-- PERSONAL BLOG SECTION (AFTER BOOK RECOMMENDATIONS) -->
+        <!-- Post 4 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/monkey-management" style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            Who's Got the Monkey?
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[leadership]</span> <span>[delegation]</span> <span>[productivity]</span> • 1 Jan 2025
+          </span>
+        </li>
 
-<!-- PERSONAL BLOG SECTION (AFTER BOOK RECOMMENDATIONS) -->
-<section class="container">
-  <h3>Personal Blog</h3>
-  <hr />
-  <ul class="post-list" style="list-style-type: none; padding-left: 0; margin: 0;">
+        <!-- Post 4 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/trek"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            Team Mate or Relationship? Learning while Trekking
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[experience]</span> <span>[perspective]</span> <span>[relationships]</span> • 7 Jan 2025
+          </span>
+        </li>
 
-      <!-- Post 4 -->
-      <li style="margin-bottom: 1rem;">
-        <a class="post-link" href="/blog/music"
-          style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-          Why do I listen to music?
-        </a>
-        <br />
-        <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-          <span>[experience]</span> <span>[perspective]</span> <span>[music]</span> • 5 Jun 2024
-        </span>
-      </li>
+        <!-- Post 4 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/finance"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            How Blockchain Technology Enhances Ethical Islamic Finance?
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[experience]</span> <span>[finance]</span>  • 3 Jan 2025
+          </span>
+        </li>
 
-      <!-- Post 4 -->
-      <li style="margin-bottom: 1rem;">
-        <a class="post-link" href="/blog/monkey-management" style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-          Who’s Got the Monkey?
-        </a>
-        <br />
-        <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-          <span>[leadership]</span> <span>[delegation]</span> <span>[productivity]</span> • 1 Jan 2025
-        </span>
-      </li>
+        <!-- Post 1 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/veil-of-silence"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            How Society's Silent Shadows Influence Crime?
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[society]</span> <span>[philosophy]</span> <span>[injustice]</span> • 16 Aug 2024
+          </span>
+        </li>
 
-      <!-- Post 4 -->
-      <li style="margin-bottom: 1rem;">
-        <a class="post-link" href="/blog/trek"
-          style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-          Team Mate or Relationship? Learning while Trekking
-        </a>
-        <br />
-        <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-          <span>[experience]</span> <span>[perspective]</span> <span>[relationships]</span> • 7 Jan 2025
-        </span>
-      </li>
+        <!-- Post 2 -->
+        <li style="margin-bottom: 1rem;">
+          <a class="post-link" href="/blog/skii"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            My Skiing Adventure at Shymbulak, KZ
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[experience]</span> <span>[adventure]</span> <span>[life]</span> • 19 Jun 2024
+          </span>
+        </li>
 
+        <!-- Post 3 -->
+        <li style="margin-bottom: 0;">
+          <a class="post-link" href="/blog/freedom"
+            style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
+            Why Breaking Free from Expectations Changed My Life?
+          </a>
+          <br />
+          <span class="post-meta" style="color: #666; font-size: 0.9rem;">
+            <span>[experience]</span> <span>[perspective]</span> <span>[life]</span> • 19 Jun 2024
+          </span>
+        </li>
+      </ul>
+    </section>
 
-      <!-- Post 4 -->
-      <li style="margin-bottom: 1rem;">
-        <a class="post-link" href="/blog/finance"
-          style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-          How Blockchain Technology Enhances Ethical Islamic Finance?
-        </a>
-        <br />
-        <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-          <span>[experience]</span> <span>[finance]</span>  • 3 Jan 2025
-        </span>
-      </li>
-
-    <!-- Post 1 -->
-    <li style="margin-bottom: 1rem;">
-      <a class="post-link" href="/blog/veil-of-silence"
-        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-        How Society's Silent Shadows Influence Crime?
-      </a>
-      <br />
-      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-        <span>[society]</span> <span>[philosophy]</span> <span>[injustice]</span> • 16 Aug 2024
-      </span>
-    </li>
-
-    <!-- Post 2 -->
-    <li style="margin-bottom: 1rem;">
-      <a class="post-link" href="/blog/skii"
-        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-        My Skiing Adventure at Shymbulak, KZ
-      </a>
-      <br />
-      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-        <span>[experience]</span> <span>[adventure]</span> <span>[life]</span> • 19 Jun 2024
-      </span>
-    </li>
-
-    <!-- Post 3 -->
-    <li style="margin-bottom: 0;">
-      <a class="post-link" href="/blog/freedom"
-        style="font-weight: 600; font-size: 1rem; text-decoration: none; color: #360bf2;">
-        Why Breaking Free from Expectations Changed My Life?
-      </a>
-      <br />
-      <span class="post-meta" style="color: #666; font-size: 0.9rem;">
-        <span>[experience]</span> <span>[perspective]</span> <span>[life]</span> • 19 Jun 2024
-      </span>
-    </li>
-  </ul>
-</section>
-
-    <!-- BUCKET LIST --><br>
+    <!-- BUCKET LIST -->
     <section class="container">
       <h3>Bucket List</h3>
       <hr />
@@ -813,7 +1289,7 @@
       </ul>
     </section>
 
-    <!-- SPOTIFY LIST --> <br>
+    <!-- SPOTIFY LIST -->
     <section class="container">
       <h3>Spotify List</h3>
       <hr />
@@ -836,7 +1312,7 @@
       </iframe>
     </section>
 
-    <!-- STRAVA SECTION --><br>
+    <!-- STRAVA SECTION -->
     <section class="container">
       <h3>2023 Year in Sports: Strava 🏃</h3>
       <hr />
@@ -854,19 +1330,79 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="page-footer font-small blue">
-    © 2025:
-    <a href="mailto:info@arbazhussain.com"> info@arbazhussain.com</a>
+  <footer class="page-footer">
+    <div class="container text-center">
+      <div class="social-icons mb-4">
+        <a href="https://medium.com/@arbazhussain" aria-label="Medium"><i class="fab fa-medium"></i></a>
+        <a href="https://github.com/arbazkiraak" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/arbazkiraak" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>© 2025: <a href="mailto:info@arbazhussain.com">info@arbazhussain.com</a></p>
+    </div>
   </footer>
 
-  <!-- Scripts: Popper, Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-    integrity="sha384-KvwN45QVpkCXGt9XyVpmoW/b/aK7/odIKh1LHS7v8ZZn+BnTjde3tbqjj9XQvF8W" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  <!-- Modern Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Theme Toggle Script -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
 
+    const themeToggle = document.querySelectorAll('.theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const hamburger = document.getElementById('hamburger');
+    const triggerMobile = document.getElementById('trigger-mobile');
+    
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 
+                      (prefersDarkScheme.matches ? 'dark' : 'light');
+    setTheme(savedTheme);
+
+    // Add event listeners
+    themeToggle.forEach(button => {
+      button.addEventListener('click', toggleTheme);
+    });
+
+    // Mobile menu toggle
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      triggerMobile.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !triggerMobile.contains(e.target)) {
+        hamburger.classList.remove('active');
+        triggerMobile.classList.remove('active');
+      }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
