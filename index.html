@@ -739,6 +739,79 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       border-color: var(--border-color);
     }
+
+    /* Bucket List */
+    .bucket-list {
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+    }
+
+    .bucket-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .bucket-list li {
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+    }
+
+    .bucket-list li:hover {
+      transform: translateX(10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .bucket-list .completed {
+      border-left: 4px solid #00b894;
+    }
+
+    .bucket-list .pending {
+      border-left: 4px solid #6c5ce7;
+    }
+
+    .bucket-list li::before {
+      display: none;
+    }
+
+    .country-flag {
+      font-size: 1.2em;
+      margin-left: auto;
+    }
+
+    .completion-badge, .status-badge {
+      padding: 4px 8px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .completion-badge {
+      background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+      color: white;
+    }
+
+    .status-badge {
+      background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+      color: white;
+    }
+
+    [data-theme="dark"] .bucket-list li {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    [data-theme="dark"] .bucket-list li:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
   </style>
 </head>
 
@@ -1350,22 +1423,151 @@
     <section class="container">
       <h3>Bucket List</h3>
       <hr />
-      <ul>
-        <li><strike>🤿 PADI Scuba diving course</strike></li>
-        <li><strike>🏕️ Camping at Chandrataal Lake, Spiti Valley</strike></li>
-        <li><strike>🛣️ Road trip across Northern Himalayas</strike></li>
-        <li><strike>🪂 Paramotoring around Annapurna Ranges, Nepal</strike></li>
-        <li><strike>🌉 Bungee Jumping</strike></li>
-        <li>🎶 Attend Boris Brejcha Music Event</li>
-        <li>🚴‍♀️ Complete a 150km cycling route on Al Qudra track, UAE</li>
-        <li>🏃‍♂️ Participate in a 50km+ Ultra Hell Race trail running competition</li>
-        <li><strike>🏄‍♂️ Master surfing in Bali</strike></li>
-        <li><strike>⛷️ Learn to ski at Shymbulak Ski Resort, KZ</strike></li>
-        <li><strike>🏔️ Hike in Pahalgam town, Kashmir</strike></li>
-        <li>🧗‍♀️ Become a certified rock climber</li>
-        <li><strike>🤿 Become a certified freediver</strike></li>
-        <li><strike>🗻 Climb Mt. Fuji, Japan</strike></li>
-      </ul>
+      <div class="bucket-list">
+        <ul>
+          <li class="completed">
+            <strike>🤿 PADI Open Water Diver certification in Koh Tao</strike>
+            <span class="country-flag">🇹🇭</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🏕️ Camping at Chandrataal Lake, Spiti Valley</strike>
+            <span class="country-flag">🇮🇳</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🛣️ Road trip across Northern Himalayas</strike>
+            <span class="country-flag">🇮🇳</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🪂 Paramotoring around Annapurna Ranges</strike>
+            <span class="country-flag">🇳🇵</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🌉 Bungee Jumping</strike>
+            <span class="country-flag">🇳🇵</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="pending">
+            🎶 Attend Boris Brejcha Music Event
+            <span class="country-flag">🇩🇪</span>
+            <span class="status-badge">Coming Soon</span>
+          </li>
+          <li class="pending">
+            🚴‍♀️ Complete a 150km cycling route on Al Qudra track
+            <span class="country-flag">🇦🇪</span>
+            <span class="status-badge">Training</span>
+          </li>
+          <li class="pending">
+            🏃‍♂️ Participate in a 50km+ Ultra Hell Race
+            <span class="country-flag">🇮🇳</span>
+            <span class="status-badge">Planning</span>
+          </li>
+          <li class="completed">
+            <strike>🏄‍♂️ Master surfing in Bali</strike>
+            <span class="country-flag">🇮🇩</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>⛷️ Learn to ski at Shymbulak Ski Resort</strike>
+            <span class="country-flag">🇰🇿</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🏔️ Hike in Pahalgam town, Kashmir</strike>
+            <span class="country-flag">🇮🇳</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="pending">
+            🧗‍♀️ Become a certified rock climber
+            <span class="country-flag">🇹🇷</span>
+            <span class="status-badge">Researching</span>
+          </li>
+          <li class="completed">
+            <strike>🤿 Become a certified freediver</strike>
+            <span class="country-flag">🇹🇭</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🗻 Climb Mt. Fuji</strike>
+            <span class="country-flag">🇯🇵</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+          <li class="completed">
+            <strike>🤿 Molchanovs Wave 1 Freediving certification in Nusa Penida</strike>
+            <span class="country-flag">🇮🇩</span>
+            <span class="completion-badge">Completed!</span>
+          </li>
+        </ul>
+      </div>
+      <style>
+        .bucket-list ul {
+          list-style: none;
+          padding: 0;
+        }
+        
+        .bucket-list li {
+          padding: 15px;
+          margin: 10px 0;
+          border-radius: 10px;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: var(--card-bg);
+          border: 1px solid var(--border-color);
+        }
+
+        .bucket-list li:hover {
+          transform: translateX(10px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .bucket-list .completed {
+          border-left: 4px solid #00b894;
+        }
+
+        .bucket-list .pending {
+          border-left: 4px solid #6c5ce7;
+        }
+
+        .bucket-list li::before {
+          display: none;
+        }
+
+        .country-flag {
+          font-size: 1.2em;
+          margin-left: auto;
+        }
+
+        .completion-badge, .status-badge {
+          padding: 4px 8px;
+          border-radius: 15px;
+          font-size: 0.8em;
+          font-weight: 500;
+          white-space: nowrap;
+        }
+
+        .completion-badge {
+          background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+          color: white;
+        }
+
+        .status-badge {
+          background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+          color: white;
+        }
+
+        [data-theme="dark"] .bucket-list li {
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        [data-theme="dark"] .bucket-list li:hover {
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+      </style>
     </section>
 
     <!-- SPOTIFY LIST -->
